@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="font-ar">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>مجالات الخبرة — Structura Capital Investments</title>
+<link rel="icon" type="image/svg+xml" href="../assets/img/structura-logo.svg">
+<meta name="description" content="التخصصات الاثنا عشر لـ Structura Capital Investments: الاستراتيجية، والاستثمار، والهيكلة القانونية والجبائية والجمركية، والدراسات، وقيادة المشاريع.">
+<style>
+/* ==========================================================================
+   Structura Capital Investments — v4
+   Identité propre (navy + cuivre), diagnostic interactif, comparatif frontal
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&family=Noto+Sans+SC:wght@400;500;700&family=Noto+Sans+Hebrew:wght@400;500;700&family=Noto+Sans+Arabic:wght@400;500;600;700&family=Noto+Kufi+Arabic:wght@500;600;700&display=swap');
+
+:root{
+  --navy:       #0B1F3A;
+  --navy-2:     #142B4D;
+  --navy-deep:  #071527;
+  --ink:        #12151A;
+  --paper:      #FFFFFF;
+  --tint:       #F4F6F9;
+  --line:       #E1E6ED;
+  --muted:      #59657A;
+
+  --brand:      #B5502E;
+  --brand-dark: #8F3E22;
+  --brand-tint: #F7E9E3;
+  --gold:       #C98400;
+
+  --c-strategie: #1F4FD8;
+  --c-invest:    #0E8F5D;
+  --c-legal:     #C98400;
+  --c-etudes:    #7C3AED;
+  --c-pilotage:  #B5502E;
+  --c-intl:      #0E8F8F;
+
+  --max: 1240px;
+  --gutter: clamp(24px, 4.5vw, 56px);
+}
+
+*{ box-sizing:border-box; }
+html{ scroll-behavior:smooth; }
+body{
+  margin:0; background:var(--paper); color:var(--ink);
+  font-family:'Inter', sans-serif; font-size:16px; line-height:1.62;
+  -webkit-font-smoothing:antialiased;
+}
+img{ max-width:100%; display:block; }
+a{ color:inherit; }
+h1,h2,h3,h4{ font-family:'Space Grotesk','Inter',sans-serif; font-weight:600; line-height:1.14; margin:0; letter-spacing:-0.01em; }
+p{ margin:0; }
+ul{ margin:0; padding:0; list-style:none; }
+button{ font-family:inherit; }
+.container{ max-width:var(--max); margin:0 auto; padding-left:var(--gutter); padding-right:var(--gutter); }
+
+@media (prefers-reduced-motion: reduce){
+  *{ animation-duration:.001ms !important; animation-iteration-count:1 !important; transition-duration:.001ms !important; scroll-behavior:auto !important; }
+}
+
+/* ---------- header ---------- */
+.site-header{ position:sticky; top:0; z-index:60; background:rgba(255,255,255,.97); backdrop-filter:blur(6px); border-bottom:1px solid var(--line); }
+.site-header .container{ display:flex; align-items:center; justify-content:space-between; height:74px; }
+.brand{ display:flex; align-items:center; gap:10px; font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:20px; text-decoration:none; color:var(--navy); }
+.brand .brand-mark{ color:var(--brand); }
+nav.main-nav{ display:flex; align-items:center; gap:2.1rem; }
+nav.main-nav a{ text-decoration:none; font-size:14.5px; font-weight:500; color:var(--navy); padding:8px 0; border-bottom:2px solid transparent; }
+nav.main-nav a:hover, nav.main-nav a.active{ border-bottom-color:var(--brand); }
+.nav-cta{ background:var(--navy); color:#fff !important; padding:10px 20px !important; border-radius:4px; font-weight:600 !important; border-bottom:none !important; }
+.nav-cta:hover{ background:var(--brand); }
+.nav-toggle{ display:none; background:none; border:none; cursor:pointer; padding:6px; }
+.nav-toggle span{ display:block; width:22px; height:2px; background:var(--navy); margin:5px 0; }
+@media (max-width:920px){
+  nav.main-nav{ position:fixed; inset:74px 0 0 0; background:#fff; flex-direction:column; align-items:flex-start; padding:2rem var(--gutter); gap:1.3rem; transform:translateX(100%); transition:transform .3s ease; overflow-y:auto; }
+  nav.main-nav.open{ transform:translateX(0); }
+  nav.main-nav a{ font-size:19px; }
+  .nav-toggle{ display:block; }
+}
+
+/* ---------- eyebrow ---------- */
+.eyebrow{ display:flex; align-items:center; gap:10px; font-size:12.5px; font-weight:700; letter-spacing:.04em; text-transform:uppercase; color:var(--brand); margin-bottom:16px; }
+.eyebrow::before{ content:""; width:22px; height:2px; background:var(--brand); display:inline-block; }
+.section-navy .eyebrow{ color:#E8A98D; }
+.section-navy .eyebrow::before{ background:#E8A98D; }
+
+/* ---------- hero ---------- */
+.hero{ background:linear-gradient(155deg,var(--navy) 0%, var(--navy-deep) 100%); color:#fff; position:relative; padding:72px 0 0; overflow:hidden; }
+.hero::after{ content:""; position:absolute; right:-140px; top:-180px; width:560px; height:560px; border-radius:50%; background:radial-gradient(circle at 30% 30%, rgba(181,80,46,.5), rgba(181,80,46,0) 70%); }
+.hero-inner{ position:relative; z-index:2; padding-bottom:60px; }
+.hero .eyebrow{ color:#E8A98D; }
+.hero .eyebrow::before{ background:#E8A98D; }
+.hero h1{ font-size:clamp(2.2rem,4.6vw,3.4rem); max-width:760px; color:#fff; }
+.hero .sub{ margin-top:16px; font-family:'Space Grotesk'; font-weight:500; font-size:1.12rem; color:#C9D4E8; max-width:640px; }
+.hero p.lede{ margin-top:20px; max-width:600px; font-size:1.02rem; color:#B9C4D6; line-height:1.65; }
+.hero-actions{ margin-top:30px; display:flex; gap:14px; flex-wrap:wrap; }
+
+.btn{ display:inline-flex; align-items:center; gap:8px; padding:13px 26px; font-family:'Inter'; font-weight:600; font-size:14.5px; text-decoration:none; border-radius:5px; border:1.5px solid transparent; cursor:pointer; }
+.btn-primary{ background:var(--brand); color:#fff; }
+.btn-primary:hover{ background:var(--brand-dark); }
+.btn-outline{ border-color:var(--navy); color:var(--navy); background:none; }
+.btn-outline:hover{ background:var(--navy); color:#fff; }
+.btn-white{ border-color:#fff; color:#fff; background:none; }
+.btn-white:hover{ background:#fff; color:var(--brand); }
+.btn-white-solid{ background:#fff; color:var(--brand); border-color:#fff; }
+.btn-white-solid:hover{ background:transparent; color:#fff; }
+
+/* ---------- animated stat counters ---------- */
+.counter-row{ display:grid; grid-template-columns:repeat(4,1fr); gap:1px; background:rgba(255,255,255,.14); border-top:1px solid rgba(255,255,255,.14); border-bottom:1px solid rgba(255,255,255,.14); position:relative; z-index:2; }
+.counter-item{ background:var(--navy-deep); padding:26px 22px; }
+.counter-item .cnum{ font-family:'Space Grotesk'; font-weight:700; font-size:2rem; color:#fff; }
+.counter-item .cnum .suffix{ color:#E8A98D; }
+.counter-item .clbl{ margin-top:6px; font-size:12.5px; color:#9FB0CC; }
+@media (max-width:760px){ .counter-row{ grid-template-columns:1fr 1fr; } }
+
+/* ---------- diagnostic tool (pièce interactive centrale) ---------- */
+.diag{ background:#fff; border-radius:12px; box-shadow:0 30px 70px -24px rgba(7,21,39,.4); padding:36px 38px; }
+.diag .diag-label{ font-size:12.5px; font-weight:700; color:var(--brand); text-transform:uppercase; letter-spacing:.03em; }
+.diag h3{ font-size:1.35rem; color:var(--navy); margin-top:10px; }
+.diag .diag-q{ margin-top:22px; font-size:14px; font-weight:600; color:var(--navy); }
+.diag-options{ margin-top:12px; display:flex; flex-direction:column; gap:9px; }
+.diag-opt{ display:block; width:100%; text-align:left; background:var(--tint); border:1.5px solid var(--line); border-radius:7px; padding:13px 16px; font-size:14px; color:var(--navy); cursor:pointer; transition:border-color .15s ease, background .15s ease; }
+.diag-opt:hover{ border-color:var(--brand); }
+.diag-opt.selected{ border-color:var(--brand); background:var(--brand-tint); font-weight:600; }
+.diag-result{ margin-top:22px; padding-top:20px; border-top:1px solid var(--line); display:none; }
+.diag-result.show{ display:block; }
+.diag-result .dr-tag{ font-size:11.5px; font-weight:700; text-transform:uppercase; letter-spacing:.03em; padding:4px 10px; border-radius:3px; display:inline-block; }
+.diag-result h4{ font-size:1.15rem; color:var(--navy); margin-top:14px; }
+.diag-result p{ margin-top:10px; font-size:14px; color:var(--muted); line-height:1.6; }
+.diag-result .btn{ margin-top:16px; padding:11px 20px; font-size:13.5px; }
+.diag-reset{ margin-top:14px; background:none; border:none; font-size:12.5px; color:var(--muted); text-decoration:underline; cursor:pointer; padding:0; }
+
+/* ---------- sections ---------- */
+section{ padding:clamp(64px,7vw,104px) 0; }
+.section-tint{ background:var(--tint); }
+.section-navy{ background:var(--navy); color:#fff; }
+.section-navy .muted{ color:#B9C4D6; }
+.section-head{ max-width:680px; margin-bottom:44px; }
+.section-head.wide{ max-width:100%; display:flex; justify-content:space-between; align-items:flex-end; gap:36px; flex-wrap:wrap; }
+.section-head h2{ font-size:clamp(1.7rem,3vw,2.35rem); color:var(--navy); }
+.section-navy .section-head h2{ color:#fff; }
+.section-head .desc{ margin-top:14px; color:var(--muted); font-size:15px; max-width:520px; }
+.section-navy .section-head .desc{ color:#B9C4D6; }
+
+/* ---------- comparison table (nous vs approche classique) ---------- */
+.compare{ border:1px solid var(--line); border-radius:10px; overflow:hidden; }
+.compare-row{ display:grid; grid-template-columns:1.3fr 1fr 1fr; }
+.compare-row + .compare-row{ border-top:1px solid var(--line); }
+.compare-row.head .cc{ font-family:'Space Grotesk'; font-weight:600; font-size:13.5px; padding:16px 20px; }
+.compare-row.head .cc:first-child{ background:var(--tint); }
+.compare-row.head .cc.us{ background:var(--navy); color:#fff; }
+.compare-row.head .cc.them{ background:#F4F0EC; color:var(--muted); }
+.compare-row .cc{ padding:18px 20px; font-size:13.5px; display:flex; align-items:center; gap:8px; }
+.compare-row .cc:first-child{ font-weight:600; color:var(--navy); background:#fff; }
+.compare-row .cc.us{ background:#FBF3EF; color:var(--navy); font-weight:500; }
+.compare-row .cc.them{ background:#fff; color:var(--muted); }
+.compare-row .ic{ font-weight:700; }
+.compare-row .cc.us .ic{ color:var(--brand); }
+.compare-row .cc.them .ic{ color:#B7BEC9; }
+@media (max-width:700px){
+  .compare-row{ grid-template-columns:1fr; }
+  .compare-row .cc:first-child{ background:var(--tint); }
+}
+
+/* ---------- pain-point cards ---------- */
+.pain-grid{ display:grid; grid-template-columns:repeat(2,1fr); gap:1px; background:var(--line); border:1px solid var(--line); border-radius:8px; overflow:hidden; }
+@media (max-width:800px){ .pain-grid{ grid-template-columns:1fr; } }
+.pain-card{ background:#fff; padding:32px; }
+.pain-card p.quote{ font-family:'Space Grotesk'; font-style:italic; font-size:1.05rem; color:var(--navy); line-height:1.55; }
+.pain-card .tagline{ margin-top:16px; font-size:12.5px; font-weight:700; color:var(--brand); text-transform:uppercase; letter-spacing:.02em; }
+
+/* ---------- feature grid ---------- */
+.feature-grid{ display:grid; grid-template-columns:repeat(2,1fr); gap:28px 40px; }
+@media (max-width:800px){ .feature-grid{ grid-template-columns:1fr; } }
+.feature-item{ border-top:3px solid var(--brand); padding-top:18px; }
+.feature-item:nth-child(2){ border-top-color:var(--c-invest); }
+.feature-item:nth-child(3){ border-top-color:var(--c-legal); }
+.feature-item:nth-child(4){ border-top-color:var(--c-etudes); }
+.feature-item h3{ font-size:1.18rem; color:var(--navy); }
+.feature-item p{ margin-top:10px; font-size:14.5px; color:var(--muted); line-height:1.6; }
+.feature-item .fi-note{ margin-top:10px; font-size:13px; font-style:italic; color:var(--navy); font-weight:500; }
+
+/* ---------- audience cards ---------- */
+.audience-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:20px; }
+@media (max-width:900px){ .audience-grid{ grid-template-columns:1fr; } }
+.audience-card{ background:#fff; border:1px solid var(--line); border-radius:8px; padding:28px; }
+.audience-card .aud-tag{ font-size:11.5px; font-weight:700; letter-spacing:.03em; text-transform:uppercase; color:var(--brand); }
+.audience-card h3{ font-size:1.12rem; margin-top:10px; color:var(--navy); }
+.audience-card p{ margin-top:12px; font-size:14px; color:var(--muted); line-height:1.6; }
+
+/* ---------- journey ---------- */
+.journey{ display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:var(--line); border:1px solid var(--line); border-radius:8px; overflow:hidden; }
+@media (max-width:860px){ .journey{ grid-template-columns:1fr; } }
+.journey-step{ background:#fff; padding:30px 28px; }
+.journey-step .js-when{ font-size:11.5px; font-weight:700; letter-spacing:.03em; text-transform:uppercase; color:var(--muted); }
+.journey-step h4{ font-size:1.14rem; margin-top:12px; color:var(--navy); }
+.journey-step p{ margin-top:10px; font-size:14px; color:var(--muted); line-height:1.6; }
+
+/* ---------- services accordion ---------- */
+.service-list{ display:flex; flex-direction:column; }
+.service-row{ border-bottom:1px solid var(--line); }
+.service-row:first-child{ border-top:1px solid var(--line); }
+.sr-head{ width:100%; background:none; border:none; cursor:pointer; display:grid; grid-template-columns:200px 1fr 24px; gap:36px; align-items:center; padding:26px 0; text-align:left; }
+@media (max-width:760px){ .sr-head{ grid-template-columns:1fr 24px; } .sr-head .sr-tag{ display:none; } }
+.sr-tag{ font-size:11.5px; font-weight:700; letter-spacing:.03em; text-transform:uppercase; }
+.service-row.s-strategie .sr-tag, .service-row.s-strategie .sr-plus{ color:var(--c-strategie); }
+.service-row.s-invest .sr-tag, .service-row.s-invest .sr-plus{ color:var(--c-invest); }
+.service-row.s-legal .sr-tag, .service-row.s-legal .sr-plus{ color:var(--c-legal); }
+.service-row.s-etudes .sr-tag, .service-row.s-etudes .sr-plus{ color:var(--c-etudes); }
+.service-row.s-pilotage .sr-tag, .service-row.s-pilotage .sr-plus{ color:var(--c-pilotage); }
+.service-row.s-intl .sr-tag, .service-row.s-intl .sr-plus{ color:var(--c-intl); }
+.sr-head h3{ font-size:1.25rem; color:var(--navy); }
+.sr-plus{ font-size:1.6rem; font-weight:400; line-height:1; transition:transform .2s ease; justify-self:end; }
+.service-row.open .sr-plus{ transform:rotate(45deg); }
+.sr-detail{ max-height:0; overflow:hidden; transition:max-height .25s ease; }
+.service-row.open .sr-detail{ max-height:220px; }
+.sr-detail-inner{ padding:0 0 26px; display:grid; grid-template-columns:200px 1fr; gap:36px; }
+@media (max-width:760px){ .sr-detail-inner{ grid-template-columns:1fr; } }
+.sr-detail-inner p{ font-size:14.5px; color:var(--muted); max-width:640px; }
+.sr-detail-inner ul{ margin-top:12px; display:flex; flex-direction:column; gap:7px; }
+.sr-detail-inner li{ font-size:13.5px; color:var(--navy); padding-left:16px; position:relative; }
+.sr-detail-inner li::before{ content:""; position:absolute; left:0; top:8px; width:6px; height:6px; border-radius:50%; background:currentColor; }
+
+/* ---------- tiles ---------- */
+.tile-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:20px; }
+@media (max-width:960px){ .tile-grid{ grid-template-columns:repeat(2,1fr); } }
+@media (max-width:640px){ .tile-grid{ grid-template-columns:1fr; } }
+.tile{ background:#fff; border:1px solid var(--line); border-top:3px solid var(--brand); border-radius:6px; padding:26px 24px; transition:background-color .2s ease, border-color .2s ease, transform .2s ease, box-shadow .2s ease; }
+.tile.t-strategie{ border-top-color:var(--c-strategie); }
+.tile.t-invest{ border-top-color:var(--c-invest); }
+.tile.t-legal{ border-top-color:var(--c-legal); }
+.tile.t-etudes{ border-top-color:var(--c-etudes); }
+.tile.t-pilotage{ border-top-color:var(--c-pilotage); }
+.tile.t-intl{ border-top-color:var(--c-intl); }
+.tile:hover{ transform:translateY(-3px); box-shadow:0 16px 32px -18px rgba(11,31,58,.28); }
+.tile.t-strategie:hover{ background:#E9EFFD; border-color:var(--c-strategie); }
+.tile.t-invest:hover{ background:#E6F5EE; border-color:var(--c-invest); }
+.tile.t-legal:hover{ background:#FBF0DC; border-color:var(--c-legal); }
+.tile.t-etudes:hover{ background:#F1E9FD; border-color:var(--c-etudes); }
+.tile.t-pilotage:hover{ background:var(--brand-tint); border-color:var(--c-pilotage); }
+.tile.t-intl:hover{ background:#E1F3F3; border-color:var(--c-intl); }
+.tile:hover h3{ color:var(--ink); }
+.tag{ display:inline-flex; align-items:center; gap:6px; font-size:11px; font-weight:700; padding:4px 10px; border-radius:3px; letter-spacing:.02em; text-transform:uppercase; }
+.tag-strategie{ background:#E9EFFD; color:var(--c-strategie); }
+.tag-invest{ background:#E6F5EE; color:var(--c-invest); }
+.tag-legal{ background:#FBF0DC; color:var(--c-legal); }
+.tag-etudes{ background:#F1E9FD; color:var(--c-etudes); }
+.tag-pilotage{ background:var(--brand-tint); color:var(--c-pilotage); }
+.tag-intl{ background:#E1F3F3; color:var(--c-intl); }
+.tile h3{ font-size:1.1rem; margin:14px 0 10px; color:var(--navy); }
+.tile p{ font-size:14px; color:var(--muted); line-height:1.6; }
+
+/* ---------- testimonials ---------- */
+.testi-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:20px; }
+@media (max-width:900px){ .testi-grid{ grid-template-columns:1fr; } }
+.testi-card{ background:#fff; border:1px solid var(--line); border-radius:8px; padding:28px; }
+.stars{ color:var(--gold); font-size:14px; letter-spacing:2px; }
+.testi-card p.tq{ margin-top:14px; font-size:14.5px; color:var(--navy); line-height:1.6; font-style:italic; }
+.testi-card .ta{ margin-top:16px; font-size:13px; color:var(--muted); }
+.testi-card .ta b{ color:var(--navy); font-family:'Space Grotesk'; display:block; font-style:normal; }
+
+/* ---------- case studies ---------- */
+.case-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:20px; }
+@media (max-width:900px){ .case-grid{ grid-template-columns:1fr; } }
+.case-card{ border:1px solid var(--line); border-radius:8px; overflow:hidden; background:#fff; }
+.case-card .cc-band{ height:8px; }
+.case-card.c-strategie .cc-band{ background:var(--c-strategie); }
+.case-card.c-invest .cc-band{ background:var(--c-invest); }
+.case-card.c-intl .cc-band{ background:var(--c-intl); }
+.case-card .cc-body{ padding:26px; }
+.case-card .cc-tag{ font-size:11px; font-weight:700; letter-spacing:.03em; text-transform:uppercase; color:var(--muted); }
+.case-card .cc-result{ margin-top:14px; font-family:'Space Grotesk'; font-weight:700; font-size:1.5rem; color:var(--navy); }
+.case-card .cc-result .rl{ display:block; font-family:'Inter'; font-weight:500; font-size:11.5px; color:var(--muted); text-transform:uppercase; letter-spacing:.02em; margin-top:2px; }
+.case-card h3{ font-size:1.05rem; margin-top:12px; color:var(--navy); }
+.case-card p{ margin-top:10px; font-size:14px; color:var(--muted); line-height:1.6; }
+
+/* ---------- values grid ---------- */
+.values-grid{ display:grid; grid-template-columns:repeat(4,1fr); gap:24px; }
+@media (max-width:900px){ .values-grid{ grid-template-columns:1fr 1fr; } }
+@media (max-width:560px){ .values-grid{ grid-template-columns:1fr; } }
+.value-item h4{ font-size:1.02rem; color:var(--navy); }
+.value-item p{ margin-top:8px; font-size:13.5px; color:var(--muted); line-height:1.55; }
+.value-item .vi-num{ font-family:'Space Grotesk'; font-size:1.6rem; color:var(--brand); margin-bottom:10px; display:block; }
+
+/* ---------- trust band ---------- */
+.trust-band{ background:var(--tint); border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
+.trust-grid{ display:grid; grid-template-columns:repeat(4,1fr); gap:1px; background:var(--line); }
+.trust-item{ background:var(--tint); padding:26px 20px; text-align:left; }
+.trust-item .ti-num{ font-family:'Space Grotesk'; font-weight:700; font-size:1.5rem; color:var(--navy); }
+.trust-item .ti-lbl{ margin-top:6px; font-size:12.5px; color:var(--muted); }
+@media (max-width:760px){ .trust-grid{ grid-template-columns:1fr 1fr; } }
+
+/* ---------- platform cards ---------- */
+.platform-card{ background:#fff; border:1px solid var(--line); border-radius:8px; padding:36px; display:grid; grid-template-columns:1.3fr 1fr; gap:36px; align-items:start; margin-bottom:20px; border-left:4px solid var(--brand); }
+.platform-card.p-invest{ border-left-color:var(--c-invest); }
+.platform-card.p-douane{ border-left-color:var(--c-intl); }
+.platform-card h3{ font-size:1.5rem; margin-top:12px; color:var(--navy); }
+.platform-card p{ color:var(--muted); margin-top:14px; font-size:14.5px; }
+.platform-card .url{ margin-top:18px; font-size:14px; font-weight:700; color:var(--brand); text-decoration:none; display:inline-block; }
+.platform-card .plist{ background:var(--tint); border-radius:6px; padding:20px 22px; }
+.platform-card .plist .prow{ padding:11px 0; border-bottom:1px solid var(--line); font-size:14px; }
+.platform-card .plist .prow:last-child{ border-bottom:none; }
+.platform-card .plist .prow b{ font-family:'Space Grotesk'; font-weight:600; color:var(--navy); display:block; margin-bottom:3px; font-size:12px; text-transform:uppercase; letter-spacing:.02em; }
+@media (max-width:760px){ .platform-card{ grid-template-columns:1fr; padding:26px; } }
+
+/* ---------- team ---------- */
+.team-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:20px; }
+@media (max-width:900px){ .team-grid{ grid-template-columns:1fr; } }
+.team-card{ background:#fff; border:1px solid var(--line); border-radius:6px; padding:26px; border-top:3px solid var(--navy); }
+.team-card:nth-child(1){ border-top-color:var(--c-strategie); }
+.team-card:nth-child(2){ border-top-color:var(--c-invest); }
+.team-card:nth-child(3){ border-top-color:var(--c-etudes); }
+.team-card .role{ font-size:12px; font-weight:700; color:var(--muted); letter-spacing:.02em; text-transform:uppercase; }
+.team-card h3{ font-size:1.25rem; margin-top:10px; color:var(--navy); }
+.team-card p{ margin-top:12px; font-size:14px; color:var(--muted); line-height:1.6; }
+
+/* ---------- CTA banner ---------- */
+.cta-banner{ background:var(--brand); color:#fff; padding:58px 0; }
+.cta-banner .container{ display:flex; justify-content:space-between; align-items:center; gap:26px; flex-wrap:wrap; }
+.cta-banner h2{ font-size:clamp(1.5rem,2.6vw,2.05rem); color:#fff; max-width:540px; }
+.cta-banner p{ margin-top:8px; color:#FBE3D8; font-size:14.5px; }
+
+/* ---------- forms ---------- */
+.form-grid{ display:grid; grid-template-columns:1fr 1fr; gap:20px; }
+@media (max-width:640px){ .form-grid{ grid-template-columns:1fr; } }
+.field{ display:flex; flex-direction:column; gap:7px; }
+.field.full{ grid-column:1/-1; }
+.field label{ font-size:12.5px; font-weight:700; color:var(--navy); text-transform:uppercase; letter-spacing:.02em; }
+.field input, .field textarea, .field select{ border:1px solid var(--line); background:#fff; border-radius:5px; padding:12px 14px; font-family:'Inter'; font-size:14.5px; color:var(--ink); }
+.field input:focus, .field textarea:focus, .field select:focus{ outline:none; border-color:var(--brand); box-shadow:0 0 0 3px rgba(181,80,46,.15); }
+.contact-info{ background:var(--tint); border-radius:8px; padding:32px; display:grid; gap:22px; }
+.contact-info .ci-row .k{ font-size:11.5px; font-weight:700; color:var(--muted); letter-spacing:.02em; text-transform:uppercase; }
+.contact-info .ci-row .v{ font-family:'Space Grotesk'; font-weight:600; font-size:1.1rem; margin-top:6px; color:var(--navy); }
+
+/* ---------- footer ---------- */
+footer.site-footer{ background:var(--navy-deep); color:#fff; padding:56px 0 30px; }
+.footer-grid{ display:grid; grid-template-columns:1.4fr 1fr 1fr 1fr; gap:36px; }
+@media (max-width:760px){ .footer-grid{ grid-template-columns:1fr 1fr; } }
+.footer-grid h5{ font-size:12.5px; font-weight:700; color:#E8A98D; margin-bottom:14px; letter-spacing:.02em; text-transform:uppercase; }
+.footer-grid a{ display:block; text-decoration:none; color:#CBD5E3; font-size:14.5px; margin-bottom:10px; }
+.footer-grid a:hover{ color:#fff; }
+.footer-brand{ font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:1.3rem; }
+.footer-brand .brand-mark{ color:#E8A98D; }
+.footer-bottom{ margin-top:48px; padding-top:22px; border-top:1px solid rgba(255,255,255,.14); display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px; font-size:12.5px; color:#8FA0BC; }
+
+/* ---------- illustrations bureau / réunion ---------- */
+.office-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:20px; }
+@media (max-width:900px){ .office-grid{ grid-template-columns:1fr; } }
+.office-panel{ border:1px solid var(--line); border-radius:8px; overflow:hidden; background:#fff; }
+.office-panel .op-img{ aspect-ratio:3/2; overflow:hidden; background:var(--tint); }
+.office-panel .op-img img{ width:100%; height:100%; object-fit:cover; display:block; }
+.office-panel .op-cap{ padding:16px 18px; border-top:1px solid var(--line); }
+.office-panel .op-cap h4{ font-size:0.98rem; color:var(--navy); }
+.office-panel .op-cap p{ margin-top:6px; font-size:13px; color:var(--muted); }
+
+/* ---------- page hero ---------- */
+.page-hero{ background:linear-gradient(155deg,var(--navy) 0%, var(--navy-deep) 100%); color:#fff; padding:60px 0 52px; }
+.page-hero h1{ font-size:clamp(1.9rem,3.6vw,2.7rem); color:#fff; max-width:760px; }
+.page-hero p.lede{ margin-top:16px; max-width:580px; color:#B9C4D6; font-size:1.02rem; }
+
+/* ---------- barre de langue ---------- */
+.lang-bar{ background:var(--navy-deep); color:#B9C4D6; font-size:12.5px; }
+.lang-bar .container{ display:flex; align-items:center; justify-content:flex-end; gap:8px; padding-top:9px; padding-bottom:9px; flex-wrap:wrap; }
+.lang-bar .lb-label{ color:#8FA0BC; margin-right:6px; }
+.lang-bar a{ text-decoration:none; padding:5px 12px; border-radius:20px; font-weight:600; border:1.5px solid transparent; transition:transform .12s ease, border-color .15s ease, background .15s ease; }
+.lang-bar a:hover{ transform:translateY(-1px); }
+.lang-bar a.lang-fr{ background:rgba(76,125,255,.16); color:#8FB0FF; border-color:rgba(76,125,255,.35); }
+.lang-bar a.lang-fr:hover{ background:rgba(76,125,255,.28); border-color:#4C7DFF; }
+.lang-bar a.lang-fr.current{ background:#4C7DFF; color:#fff; border-color:#4C7DFF; }
+.lang-bar a.lang-en{ background:rgba(52,211,153,.16); color:#7EE8C0; border-color:rgba(52,211,153,.35); }
+.lang-bar a.lang-en:hover{ background:rgba(52,211,153,.28); border-color:#34D399; }
+.lang-bar a.lang-en.current{ background:#34D399; color:#06281c; border-color:#34D399; }
+.lang-bar a.lang-zh{ background:rgba(251,191,36,.16); color:#FDD988; border-color:rgba(251,191,36,.35); }
+.lang-bar a.lang-zh:hover{ background:rgba(251,191,36,.28); border-color:#FBBF24; }
+.lang-bar a.lang-zh.current{ background:#FBBF24; color:#3a2604; border-color:#FBBF24; }
+.lang-bar a.lang-he{ background:rgba(167,139,250,.16); color:#C7B7FB; border-color:rgba(167,139,250,.35); }
+.lang-bar a.lang-he:hover{ background:rgba(167,139,250,.28); border-color:#A78BFA; }
+.lang-bar a.lang-he.current{ background:#A78BFA; color:#241a44; border-color:#A78BFA; }
+.lang-bar .lb-sep{ display:none; }
+[dir="rtl"] .lang-bar .container{ justify-content:flex-start; }
+
+/* ---------- popup de langue ---------- */
+.lang-modal-overlay{ position:fixed; inset:0; background:rgba(7,21,39,.72); z-index:200; display:flex; align-items:center; justify-content:center; padding:20px; }
+.lang-modal-overlay[hidden]{ display:none; }
+.lang-modal{ background:#fff; border-radius:10px; max-width:420px; width:100%; padding:34px 32px; box-shadow:0 30px 80px -20px rgba(0,0,0,.5); position:relative; }
+.lang-modal h3{ font-size:1.3rem; color:var(--navy); }
+.lang-modal p{ margin-top:8px; font-size:13.5px; color:var(--muted); }
+.lang-modal .lm-options{ margin-top:22px; display:grid; grid-template-columns:1fr 1fr; gap:10px; }
+.lang-modal .lm-opt{ display:flex; align-items:center; justify-content:center; gap:8px; border:1.5px solid var(--line); border-radius:7px; padding:14px 10px; text-decoration:none; color:var(--navy); font-weight:600; font-size:14.5px; transition:border-color .15s ease, background .15s ease; }
+.lang-modal .lm-opt:hover{ border-color:var(--brand); background:var(--brand-tint); }
+.lang-modal .lm-skip{ margin-top:18px; width:100%; text-align:center; background:none; border:none; color:var(--muted); font-size:13px; text-decoration:underline; cursor:pointer; padding:6px; }
+
+/* ---------- support RTL (hébreu) ---------- */
+[dir="rtl"] body{ font-family:'Noto Sans Hebrew','Inter',sans-serif; }
+[dir="rtl"] .eyebrow::before{ order:2; }
+[dir="rtl"] .service-row .sr-detail-inner,
+[dir="rtl"] .platform-card,
+[dir="rtl"] .compare-row,
+[dir="rtl"] .cta-banner .container,
+[dir="rtl"] .hero .container,
+[dir="rtl"] .counter-row,
+[dir="rtl"] .footer-grid{ direction:rtl; }
+[dir="rtl"] .sr-detail-inner li{ padding-left:0; padding-right:16px; }
+[dir="rtl"] .sr-detail-inner li::before{ left:auto; right:0; }
+[dir="rtl"] .value-item, [dir="rtl"] .stat, [dir="rtl"] .trust-item{ text-align:right; }
+
+/* ---------- polices CJK / Hébreu (chargées uniquement sur les pages concernées) ---------- */
+.font-zh body{ font-family:'Inter','Noto Sans SC',sans-serif; }
+.font-zh h1,.font-zh h2,.font-zh h3,.font-zh h4{ font-family:'Noto Sans SC','Space Grotesk',sans-serif; }
+.font-he body, .font-he h1, .font-he h2, .font-he h3, .font-he h4{ font-family:'Noto Sans Hebrew','Inter',sans-serif; }
+
+
+/* ---------- brand lockup (Structura Capital Investments) ---------- */
+.brand-lockup{ display:flex; flex-direction:column; line-height:1.05; }
+.brand-main{ font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:17px; letter-spacing:.02em; color:var(--navy); }
+.brand-sub{ font-family:'Inter',sans-serif; font-weight:600; font-size:9px; letter-spacing:.13em; text-transform:uppercase; color:var(--brand); margin-top:2px; }
+.footer-brand-lockup{ display:flex; flex-direction:column; line-height:1.1; }
+.footer-brand-main{ font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:1.25rem; letter-spacing:.02em; color:#fff; }
+.footer-brand-sub{ font-family:'Inter',sans-serif; font-weight:600; font-size:11px; letter-spacing:.11em; text-transform:uppercase; color:#E8A98D; margin-top:3px; }
+
+/* ---------- hero brochure (guide download) ---------- */
+.hero-brochure{ position:relative; z-index:2; margin-top:6px; padding-bottom:56px; }
+.hb-card{ display:flex; align-items:center; gap:24px; background:rgba(255,255,255,.07); border:1px solid rgba(255,255,255,.16); border-radius:12px; padding:20px 26px; flex-wrap:wrap; }
+.hb-cover{ width:64px; height:auto; border-radius:4px; box-shadow:0 10px 26px -8px rgba(0,0,0,.55); flex-shrink:0; }
+.hb-text{ flex:1 1 320px; min-width:240px; }
+.hb-kicker{ display:block; font-size:11px; font-weight:700; letter-spacing:.07em; text-transform:uppercase; color:#E8A98D; margin-bottom:6px; }
+.hb-text h4{ font-family:'Space Grotesk',sans-serif; font-size:1rem; color:#fff; font-weight:600; line-height:1.32; margin:0 0 6px; }
+.hb-text p{ font-size:13.5px; color:#B9C4D6; line-height:1.55; max-width:600px; margin:0; }
+.hb-btn{ flex-shrink:0; white-space:nowrap; margin-left:auto; }
+@media (max-width:760px){ .hb-card{ flex-direction:column; align-items:flex-start; } .hb-btn{ margin-left:0; } }
+[dir="rtl"] .hb-btn{ margin-left:0; margin-right:auto; }
+[dir="rtl"] .hb-card{ text-align:right; }
+
+
+/* ---------- tuiles de langue : arabe & espagnol ---------- */
+.lang-bar a.lang-ar{ background:rgba(34,211,238,.16); color:#8BE9F7; border-color:rgba(34,211,238,.35); font-family:'Noto Sans Arabic','Inter',sans-serif; }
+.lang-bar a.lang-ar:hover{ background:rgba(34,211,238,.28); border-color:#22D3EE; }
+.lang-bar a.lang-ar.current{ background:#22D3EE; color:#062a31; border-color:#22D3EE; }
+.lang-bar a.lang-es{ background:rgba(248,113,113,.16); color:#FDAAAA; border-color:rgba(248,113,113,.35); }
+.lang-bar a.lang-es:hover{ background:rgba(248,113,113,.28); border-color:#F87171; }
+.lang-bar a.lang-es.current{ background:#F87171; color:#3b0a0a; border-color:#F87171; }
+.lang-modal .lm-options{ grid-template-columns:repeat(3,1fr); }
+@media (max-width:420px){ .lang-modal .lm-options{ grid-template-columns:1fr 1fr; } }
+.lang-modal .lm-opt.lm-ar{ font-family:'Noto Sans Arabic','Inter',sans-serif; }
+.lang-modal .lm-opt.lm-ar:hover{ border-color:#22D3EE; background:#E6FAFD; }
+.lang-modal .lm-opt.lm-es:hover{ border-color:#F87171; background:#FDECEC; }
+[dir="rtl"] .diag-opt, [dir="rtl"] .sr-head{ text-align:right; }
+[dir="rtl"] .lang-bar .lb-label{ margin-right:0; margin-left:6px; unicode-bidi:plaintext; }
+
+/* ---------- police & typographie arabe ---------- */
+.font-ar body{ font-family:'Noto Sans Arabic','Inter',sans-serif; line-height:1.8; }
+.font-ar h1,.font-ar h2,.font-ar h3,.font-ar h4,.font-ar h5,
+.font-ar .hero .sub,.font-ar .brand,.font-ar .pain-card p.quote,
+.font-ar .counter-item .cnum,.font-ar .case-card .cc-result,.font-ar .contact-info .ci-row .v{ font-family:'Noto Kufi Arabic','Noto Sans Arabic',sans-serif; }
+.font-ar h1,.font-ar h2,.font-ar h3,.font-ar h4{ line-height:1.45; }
+.font-ar *{ letter-spacing:0 !important; }
+.font-ar .pain-card p.quote,.font-ar .testi-card p.tq,.font-ar .feature-item .fi-note{ font-style:normal; }
+.font-ar .brand-lockup,.font-ar .footer-brand-lockup,.font-ar .brand-main,.font-ar .brand-sub,
+.font-ar .footer-brand-main,.font-ar .footer-brand-sub{ font-family:'Space Grotesk','Inter',sans-serif; letter-spacing:.02em !important; }
+.font-ar .lang-bar a:not(.lang-ar),.font-ar .lang-modal .lm-opt:not(.lm-ar){ font-family:'Inter','Noto Sans SC','Noto Sans Hebrew',sans-serif; }
+
+html{ overflow-x:clip; }
+[dir="rtl"] a[href^="tel:"]{ direction:ltr; unicode-bidi:embed; }
+/* ---------- logo ---------- */
+.brand-logo{ width:46px; height:46px; flex-shrink:0; }
+.footer-logo-row{ display:flex; align-items:center; gap:14px; }
+.footer-logo{ width:54px; height:54px; flex-shrink:0; }
+@media (max-width:520px){ .brand-logo{ width:38px; height:38px; } }
+
+/* ---------- vidéo sous le diagnostic ---------- */
+.hero-side{ display:flex; flex-direction:column; gap:22px; min-width:0; }
+.hero-video{ position:relative; border-radius:12px; overflow:hidden; aspect-ratio:16/9; background:var(--navy-deep); box-shadow:0 30px 70px -24px rgba(7,21,39,.55); border:1px solid rgba(255,255,255,.14); }
+.hero-video video{ width:100%; height:100%; object-fit:cover; display:block; }
+.hero-video .hv-play{ position:absolute; left:16px; bottom:16px; display:inline-flex; align-items:center; gap:10px; background:rgba(7,21,39,.78); color:#fff; border:1px solid rgba(255,255,255,.28); border-radius:30px; padding:9px 16px 9px 10px; font-size:13px; font-weight:600; cursor:pointer; backdrop-filter:blur(4px); transition:background .15s ease; }
+.hero-video .hv-play:hover{ background:var(--brand); border-color:var(--brand); }
+.hero-video .hv-play .hv-ic{ width:26px; height:26px; border-radius:50%; background:var(--brand); display:inline-flex; align-items:center; justify-content:center; }
+.hero-video .hv-play:hover .hv-ic{ background:#fff; }
+.hero-video .hv-play:hover .hv-ic svg{ fill:var(--brand); }
+[dir="rtl"] .hero-video .hv-play{ left:auto; right:16px; padding:9px 10px 9px 16px; }
+.film-modal{ position:fixed; inset:0; background:rgba(4,12,24,.9); z-index:210; display:flex; align-items:center; justify-content:center; padding:20px; }
+.film-modal[hidden]{ display:none; }
+.film-modal .fm-box{ position:relative; width:min(1100px,100%); }
+.film-modal video{ width:100%; border-radius:10px; display:block; background:#000; }
+.film-modal .fm-close{ position:absolute; top:-46px; right:0; background:none; border:1.5px solid rgba(255,255,255,.4); color:#fff; border-radius:20px; padding:6px 14px; font-size:13px; cursor:pointer; }
+.film-modal .fm-close:hover{ background:#fff; color:var(--navy); }
+@media (max-width:900px){ .hero-inner{ grid-template-columns:1fr !important; gap:36px !important; } }
+@media (prefers-reduced-motion: reduce){ .hero-video video{ display:none; } .hero-video{ background:var(--navy-deep) url(../assets/video/structura-hero-poster.jpg) center/cover; } }
+.tag-link{ text-decoration:none; transition:filter .15s ease; }
+.tag-link:hover{ filter:brightness(.92); text-decoration:underline; }
+</style>
+</head>
+<body>
+  <div class="lang-bar">
+    <div class="container">
+      <span class="lb-label">Select your language:</span>
+      <a href="expertises.html" class="lang-ar current" hreflang="ar" lang="ar">العربية</a><a href="../expertises.html" class="lang-fr" hreflang="fr" lang="fr">Français</a><a href="../en/expertises.html" class="lang-en" hreflang="en" lang="en">English</a><a href="../zh/expertises.html" class="lang-zh" hreflang="zh" lang="zh">中文</a><a href="../es/expertises.html" class="lang-es" hreflang="es" lang="es">Español</a><a href="../he/expertises.html" class="lang-he" hreflang="he" lang="he">עברית</a>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="container">
+      <a href="index.html" class="brand">
+        <img src="../assets/img/structura-logo.svg" alt="" class="brand-logo" width="46" height="46"><span class="brand-lockup"><span class="brand-main">STRUCTURA</span><span class="brand-sub">Capital Investments</span></span>
+      </a>
+      <button class="nav-toggle" aria-label="القائمة"><span></span><span></span><span></span></button>
+      <nav class="main-nav">
+        <a href="index.html" class="">الرئيسية</a>
+        <a href="expertises.html" class="active">مجالات الخبرة</a>
+        <a href="plateformes.html" class="">المنصات</a>
+        <a href="cabinet.html" class="">المكتب</a>
+        <a href="contact.html" class="">اتصل بنا</a>
+        <a href="contact.html" class="nav-cta">تواصل معنا</a>
+      </nav>
+    </div>
+  </header>
+
+
+  <section class="page-hero">
+    <div class="container">
+      <span class="eyebrow">مجالات خبرتنا</span>
+      <h1>اثنا عشر تخصصاً، وهدف واحد: إنجاح مشروعكم</h1>
+      <p class="lede">تطابق مجالات الخبرة هذه الغرض الاجتماعي لـ Structura Capital Investments. وتتكامل حسب احتياجات كل مهمة، من التأطير الاستراتيجي إلى التمثيل المؤسساتي.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="tile-grid">
+        <div class="tile t-strategie">
+          <span class="tag tag-strategie">الاستراتيجية</span>
+          <h3>الاستراتيجية وإدارة المقاولات</h3>
+          <p>استشارات في الإدارة والاستراتيجية، لتوضيح تموقع، أو الحسم في تنظيم، أو التحضير لقرار تطوير.</p>
+        </div>
+        <div class="tile t-invest">
+          <span class="tag tag-invest">الاستثمار</span>
+          <h3>الاستثمار وإعداد المشاريع</h3>
+          <p>المواكبة الاقتصادية للمستثمرين: إعداد وتقييم وتتبع مشاريع الاستثمار، من مخطط الأعمال إلى بدء الاستغلال.</p>
+        </div>
+        <div class="tile t-legal">
+          <span class="tag tag-legal">القانون والجبايات</span>
+          <h3>الاستشارة القانونية والمسطرية</h3>
+          <p>استشارة قانونية ومسطرية للمستثمرين وحاملي المشاريع، وتأسيس الشركات حتى انطلاقها التشغيلي.</p>
+        </div>
+        <div class="tile t-legal">
+          <span class="tag tag-legal">القانون والجبايات</span>
+          <h3>الهيكلة المالية والجبائية والجمركية</h3>
+          <p>المساعدة في الهيكلة المالية والجبائية والجمركية والإدارية للمشاريع، لتأمين التركيبة قبل الالتزام برؤوس الأموال.</p>
+        </div>
+        <div class="tile t-etudes">
+          <span class="tag tag-etudes">الدراسات</span>
+          <h3>دراسات السوق والجدوى</h3>
+          <p>إنجاز دراسات السوق ودراسات الجدوى والتحليلات القطاعية والاقتصادية الملائمة لكل قرار استثماري.</p>
+        </div>
+        <div class="tile t-pilotage">
+          <span class="tag tag-pilotage">القيادة</span>
+          <h3>تدبير المشاريع وقيادتها</h3>
+          <p>تدبير المشاريع وقيادتها لحساب الغير، مع تتبع منظّم للمراحل الرئيسية والميزانيات والأطراف المعنية.</p>
+        </div>
+        <div class="tile t-pilotage">
+          <span class="tag tag-pilotage">القيادة</span>
+          <h3>التمثيل المؤسساتي</h3>
+          <p>التمثيل لدى المؤسسات العمومية والخاصة المعنية بملفات الاستثمار، وتتبع العلاقات الإدارية.</p>
+        </div>
+        <div class="tile t-pilotage">
+          <span class="tag tag-pilotage">القيادة</span>
+          <h3>التمثيل في النزاعات والمنازعات</h3>
+          <p>تمثيل العملاء في حالة النزاعات أو المنازعات التي قد تنشأ لدى المؤسسات العمومية والخاصة.</p>
+        </div>
+        <div class="tile t-etudes">
+          <span class="tag tag-etudes">الدراسات</span>
+          <h3>التكوين والمواكبة</h3>
+          <p>تنظيم دورات تكوينية ومواكبة حاملي المشاريع والمستثمرين.</p>
+        </div>
+        <div class="tile t-intl">
+          <span class="tag tag-intl">الدولي</span>
+          <h3>التجارة الدولية والاستيراد والتصدير</h3>
+          <p>عمليات الاستيراد والتصدير لحساب الشركة أو لحساب عملاء من الغير، وعمليات التجارة الوطنية والدولية.</p>
+        </div>
+        <div class="tile t-intl">
+          <span class="tag tag-intl">الدولي</span>
+          <h3>النقل واللوجستيك</h3>
+          <p>عمليات النقل واللوجستيك الوطنية والدولية، دعماً للمشاريع الصناعية والتجارية لعملائنا.</p>
+        </div>
+        <div class="tile t-intl">
+          <span class="tag tag-intl">الدولي</span>
+          <h3>هندسة المنصات الرقمية</h3>
+          <p>تصميم واستغلال منصات للتسويق والاستشارة — Smart-Invest وImport-Expert — تُكمّل مهامنا.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-tint">
+    <div class="container">
+      <span class="eyebrow">دراسات حالة</span>
+      <div class="section-head">
+        <h2>مواقف حقيقية، ونتائج ملموسة</h2>
+      </div>
+      <div class="case-grid">
+        <div class="case-card c-strategie">
+          <div class="cc-band"></div>
+          <div class="cc-body">
+            <div class="cc-tag">السياحة والترفيه — مراكش</div>
+            <div class="cc-result">CAPEX: حوالي 5,98 مليون درهم<span class="rl">نمذجة شاملة</span></div>
+            <h3>هيكلة مشروع حديقة ترفيهية</h3>
+            <p>الهيكلة القانونية والمالية لفضاء مائي وترفيهي، مع تحليل حساسية CAPEX/VAN/TRI واختيار موردين دوليين.</p>
+          </div>
+        </div>
+        <div class="case-card c-invest">
+          <div class="cc-band"></div>
+          <div class="cc-body">
+            <div class="cc-tag">الفندقة والاستثمار</div>
+            
+            <h3>أمّنوا شراكاتكم ومشاريعكم المشتركة</h3>
+            <p>نُهيكل تركيباتكم المالية والقانونية انطلاقاً من مقاربة المقارنة المرجعية القطاعية، لإضفاء الموضوعية على اختياراتكم وتعزيز فرص نجاحكم ومردوديتكم.</p>
+          </div>
+        </div>
+        <div class="case-card c-intl">
+          <div class="cc-band"></div>
+          <div class="cc-body">
+            <div class="cc-tag">التجارة الدولية</div>
+            
+            <h3>سلسلة إمدادكم موثوقة من البداية إلى النهاية</h3>
+            <p>إعداد مخططات اقتناء المعدات والمشتريات، ومواكبة فعالة في إجراءات الاستيراد وعلاقاتكم مع السلطات الجمركية.</p>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+
+  <section class="section-navy">
+    <div class="container">
+      <span class="eyebrow">كيف نتدخل</span>
+      <div class="section-head">
+        <h2>ثلاث صيغ للمهام</h2>
+      </div>
+      <div class="process-list">
+        <div class="process-card">
+          <div class="step-num">01</div>
+          <h4>مهمة محددة</h4>
+          <p>دراسة جدوى، أو هيكلة قانونية وجبائية، أو مذكرة تأطير استراتيجي تُسلَّم ضمن نطاق محدد.</p>
+        </div>
+        <div class="process-card">
+          <div class="step-num">02</div>
+          <h4>مواكبة مستمرة</h4>
+          <p>مواكبة مستثمر أو حامل مشروع على المدى الطويل، من الهيكلة إلى بدء الاستغلال.</p>
+        </div>
+        <div class="process-card">
+          <div class="step-num">03</div>
+          <h4>قيادة مفوّضة</h4>
+          <p>تدبير مشروع وقيادته لحساب العميل، مع تقارير منتظمة.</p>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-banner">
+    <div class="container">
+      <div>
+        <h2>لا تعرفون من أين تبدؤون؟</h2>
+        <p>محادثة واحدة تكفي لتحديد نقطة الانطلاق المناسبة.</p>
+      </div>
+      <a href="contact.html" class="btn btn-white-solid">اعرضوا علينا مشروعكم</a>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-logo-row"><img src="../assets/img/structura-logo-light.svg" alt="" class="footer-logo" width="54" height="54"><div class="footer-brand footer-brand-lockup"><span class="footer-brand-main">STRUCTURA</span><span class="footer-brand-sub">Capital Investments</span></div></div>
+          <p style="margin-top:16px;color:#CBD5E3;font-size:14px;max-width:280px;">مكتب استشارات في الإدارة والاستثمار وقيادة المشاريع، مقره مراكش، ينشط في المغرب وعلى الصعيد الدولي.</p>
+        </div>
+        <div>
+          <h5>المكتب</h5>
+          <a href="expertises.html">مجالات الخبرة</a>
+          <a href="cabinet.html">المكتب</a>
+          <a href="cabinet.html#equipe">فريق الإدارة</a>
+          <a href="contact.html">اتصل بنا</a>
+        </div>
+        <div>
+          <h5>المنصات</h5>
+          <a href="plateformes.html">Smart-Invest</a>
+          <a href="plateformes.html">Import-Expert</a>
+        </div>
+        <div>
+          <h5>معلومات الاتصال</h5>
+          <a href="mailto:contact@structura-investments.ma">contact@structura-investments.ma</a>
+          <a href="tel:+212500000000">+212 5 00 00 00 00</a>
+          <a>مراكش، المغرب</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Structura Capital Investments. جميع الحقوق محفوظة.</span>
+        <span>مراكش، المغرب</span>
+      </div>
+    </div>
+  </footer>
+
+
+  <script>
+document.addEventListener('DOMContentLoaded', function () {
+  /* nav mobile */
+  var toggle = document.querySelector('.nav-toggle');
+  var nav = document.querySelector('.main-nav');
+  if (toggle && nav) {
+    toggle.addEventListener('click', function () { nav.classList.toggle('open'); });
+    nav.querySelectorAll('a').forEach(function (a) {
+      a.addEventListener('click', function () { nav.classList.remove('open'); });
+    });
+  }
+
+  /* formulaire de contact */
+  var form = document.getElementById('contact-form');
+  if (form) {
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var btn = form.querySelector('button[type="submit"]');
+      var original = btn.textContent;
+      btn.textContent = 'تم إرسال الرسالة';
+      btn.disabled = true;
+      form.reset();
+      setTimeout(function () { btn.textContent = original; btn.disabled = false; }, 3200);
+    });
+  }
+
+  /* accordéon des expertises */
+  document.querySelectorAll('.sr-head').forEach(function (head) {
+    head.addEventListener('click', function () {
+      var row = head.closest('.service-row');
+      var wasOpen = row.classList.contains('open');
+      row.parentNode.querySelectorAll('.service-row.open').forEach(function (r) { r.classList.remove('open'); });
+      if (!wasOpen) row.classList.add('open');
+    });
+  });
+
+  /* diagnostic interactif */
+  var diag = document.getElementById('diag');
+  if (diag) {
+    var results = {};
+    try { results = JSON.parse(diag.getAttribute('data-results') || '{}'); } catch (e) { results = {}; }
+    var ctaLabel = diag.getAttribute('data-cta') || 'View this expertise';
+    var opts = diag.querySelectorAll('.diag-opt');
+    var resultBox = diag.querySelector('.diag-result');
+    var resetBtn = diag.querySelector('.diag-reset');
+    opts.forEach(function (opt) {
+      opt.addEventListener('click', function () {
+        opts.forEach(function (o) { o.classList.remove('selected'); });
+        opt.classList.add('selected');
+        var key = opt.getAttribute('data-key');
+        var r = results[key];
+        if (!r) return;
+        resultBox.innerHTML =
+          '<span class="dr-tag" style="background:' + r.color + '22;color:' + r.color + ';">' + r.tag + '</span>' +
+          '<h4>' + r.title + '</h4>' +
+          '<p>' + r.text + '</p>' +
+          '<a href="' + r.link + '" class="btn btn-primary">' + ctaLabel + '</a>';
+        resultBox.classList.add('show');
+      });
+    });
+    if (resetBtn) {
+      resetBtn.addEventListener('click', function () {
+        opts.forEach(function (o) { o.classList.remove('selected'); });
+        resultBox.classList.remove('show');
+        resultBox.innerHTML = '';
+      });
+    }
+  }
+
+  /* compteurs animés (un seul déclenchement au scroll) */
+  var counters = document.querySelectorAll('.cnum[data-target]');
+  if (counters.length && 'IntersectionObserver' in window) {
+    var seen = new WeakSet();
+    var obs = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting && !seen.has(entry.target)) {
+          seen.add(entry.target);
+          animateCounter(entry.target);
+        }
+      });
+    }, { threshold: 0.5 });
+    counters.forEach(function (c) { obs.observe(c); });
+  }
+  function animateCounter(el) {
+    var target = parseInt(el.getAttribute('data-target'), 10);
+    var suffix = el.getAttribute('data-suffix') || '';
+    var duration = 900;
+    var start = null;
+    function step(ts) {
+      if (!start) start = ts;
+      var progress = Math.min((ts - start) / duration, 1);
+      var eased = 1 - Math.pow(1 - progress, 3);
+      var val = Math.round(target * eased);
+      el.textContent = val + '';
+      if (suffix) el.innerHTML = val + '<span class="suffix">' + suffix + '</span>';
+      if (progress < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+});
+
+/* popup de sélection de langue (page d'accueil uniquement) */
+document.addEventListener('DOMContentLoaded', function () {
+  var overlay = document.getElementById('lang-modal-overlay');
+  if (!overlay) return;
+  var already = localStorage.getItem('atlas_lang_prompted');
+  if (!already) {
+    overlay.hidden = false;
+  }
+  function dismiss() {
+    localStorage.setItem('atlas_lang_prompted', '1');
+    overlay.hidden = true;
+  }
+  var skipBtn = overlay.querySelector('.lm-skip');
+  if (skipBtn) skipBtn.addEventListener('click', dismiss);
+  overlay.querySelectorAll('.lm-opt').forEach(function (a) {
+    a.addEventListener('click', function () { localStorage.setItem('atlas_lang_prompted', '1'); });
+  });
+  overlay.addEventListener('click', function (e) {
+    if (e.target === overlay) dismiss();
+  });
+});
+
+  </script>
+</body>
+</html>
