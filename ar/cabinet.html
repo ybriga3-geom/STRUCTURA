@@ -487,6 +487,35 @@ html{ overflow-x:clip; }
 @media (prefers-reduced-motion: reduce){ .hero-video video{ display:none; } .hero-video{ background:var(--navy-deep) url(../assets/video/structura-hero-poster.jpg) center/cover; } }
 .tag-link{ text-decoration:none; transition:filter .15s ease; }
 .tag-link:hover{ filter:brightness(.92); text-decoration:underline; }
+
+/* ---------- équipe dirigeante : fiches profil ---------- */
+.team-grid.team-grid--2{ grid-template-columns:repeat(2,1fr); align-items:start; }
+@media (max-width:900px){ .team-grid.team-grid--2{ grid-template-columns:1fr; } }
+.team-card--profile{ padding:28px; }
+.team-card--profile .tc-head{ display:flex; align-items:center; gap:20px; }
+.team-card--profile .tc-photo{ width:104px; height:104px; border-radius:50%; object-fit:cover; flex-shrink:0; border:3px solid #fff; box-shadow:0 0 0 1px var(--line), 0 6px 16px rgba(11,31,58,.12); }
+.team-card--profile .tc-head h3{ margin-top:6px; font-size:1.35rem; }
+.team-card--profile .tc-lead{ margin-top:20px; font-size:14.5px; color:var(--ink); line-height:1.7; }
+.team-card--profile .tc-block{ margin-top:22px; }
+.team-card--profile .tc-block h4{ font-size:11.5px; font-weight:700; letter-spacing:.06em; text-transform:uppercase; color:var(--brand); margin-bottom:8px; }
+.team-card--profile .tc-block > p{ margin-top:0; }
+.tc-timeline{ list-style:none; margin:0; padding:0; border-inline-start:2px solid var(--line); }
+.tc-timeline li{ position:relative; padding-inline-start:16px; padding-bottom:14px; }
+.tc-timeline li:last-child{ padding-bottom:0; }
+.tc-timeline li::before{ content:""; position:absolute; inset-inline-start:-6px; top:6px; width:10px; height:10px; border-radius:50%; background:#fff; border:2px solid var(--navy); }
+.tc-timeline li strong{ display:block; font-size:14px; color:var(--navy); }
+.tc-timeline .tc-date{ display:inline-block; margin-top:3px; font-size:11.5px; font-weight:600; color:var(--muted); background:var(--tint); border-radius:10px; padding:1px 8px; }
+.tc-timeline .tc-date.is-current{ color:#fff; background:var(--c-invest); }
+.tc-timeline li p{ margin-top:4px !important; font-size:13.5px; }
+.tc-tags{ display:flex; flex-wrap:wrap; gap:6px; }
+.tc-tags span{ font-size:12px; font-weight:600; color:var(--navy); background:var(--tint); border:1px solid var(--line); border-radius:14px; padding:4px 10px; }
+
+/* ---------- salle de réunion : double photo ---------- */
+.office-panel .op-img.op-duo{ aspect-ratio:auto; height:360px; display:grid; grid-template-columns:1.9fr 1fr; gap:4px; }
+.office-panel .op-img.op-duo img{ height:100%; }
+@media (max-width:900px){ .office-panel .op-img.op-duo{ height:260px; } }
+
+@media (max-width:900px){ .cab-fonctionnement{ grid-template-columns:1fr !important; gap:28px !important; } }
 </style>
 </head>
 <body>
@@ -575,36 +604,48 @@ html{ overflow-x:clip; }
   <section id="equipe">
     <div class="container">
       <span class="eyebrow">فريق الإدارة</span>
-      <div class="team-grid">
-        <div class="team-card">
-          <div class="role">الرئيس، مسيّر</div>
-          <h3>Adam Fassil</h3>
-          <p>يتولى تمثيل الشركة في علاقاتها مع الأغيار والإدارات، والإدارة العامة للمهام.</p>
+      <div class="team-grid team-grid--2">
+        <div class="team-card team-card--profile">
+          <div class="tc-head">
+            <img class="tc-photo" src="../assets/img/team-adam-fassil.jpg" alt="صورة Adam Fassil، رئيس Structura Capital Investments" width="104" height="104" loading="lazy">
+            <div><div class="role">الرئيس، مسيّر</div><h3>Adam Fassil</h3></div>
+          </div>
+          <p class="tc-lead">مسيّر في قطاع التكنولوجيا ورائد أعمال ومستثمر، راكم أكثر من 35 سنة من الخبرة بين الولايات المتحدة والمغرب. بعد مسار مهني في قطاع التكنولوجيا الأمريكي (كاليفورنيا، أريزونا)، وسّع أنشطته لتشمل الاستثمار الفندقي والعقاري في المغرب حيث يقيم حالياً، مع مواصلة عمله مستشاراً تنفيذياً.</p>
+          <div class="tc-block"><h4>التكوين</h4><p>جامعة بيركلي (الأعمال والتكنولوجيا)</p></div>
+          <div class="tc-block"><h4>المسار المهني</h4>
+            <ul class="tc-timeline">
+              <li><strong>مستشار تنفيذي — SoftPoint، سكوتسديل (أريزونا)</strong><span class="tc-date is-current">المنصب الحالي</span><p>تقديم الاستشارة الاستراتيجية لفرق الإدارة: النمو، والنجاعة التشغيلية، ومواءمة الاستثمارات التكنولوجية مع الأهداف بعيدة المدى للمؤسسة.</p></li>
+              <li><strong>رائد أعمال ومستثمر — المغرب</strong><span class="tc-date">2000 – اليوم</span><p>اقتناء وتجديد واستغلال أصول فندقية وعقارية؛ الإشراف على التمويل والتسيير التشغيلي؛ نسج علاقات استراتيجية مع المستثمرين ومهنيي القطاع.</p></li>
+              <li><strong>شريك — Technology Ventures، سان فرانسيسكو وسكوتسديل</strong><p>المشاركة في تأسيس شركات تكنولوجية؛ التطوير التجاري والتوسع في أسواق أمريكية تنافسية.</p></li>
+              <li><strong>مهام تقنية واستشارية — IBM وHIS وMAI (كاليفورنيا)</strong><p>مشاريع مؤسساتية، وتنفيذ أنظمة لفائدة كبار الحسابات، وتحسين النجاعة التشغيلية عبر التكنولوجيا.</p></li>
+              <li><strong>بداية المسار</strong><p>العمل في القطاع الفندقي خلال فترة الدراسة: تجربة مؤسِّسة في خدمة الزبناء والتسيير التشغيلي.</p></li>
+            </ul>
+          </div>
+          <div class="tc-block"><h4>محطات بارزة</h4><p>مسار دولي بين المغرب والولايات المتحدة؛ انتقال من التكنولوجيا إلى الفندقة والعقار؛ نشاط استشاري استراتيجي موازٍ لمشاريع استثمارية طويلة المدى.</p></div>
+          <div class="tc-block"><h4>الكفاءات</h4><div class="tc-tags"><span>القيادة التنفيذية</span><span>الاستشارة التكنولوجية</span><span>التطوير التجاري</span><span>الشراكات الاستراتيجية</span><span>ريادة الأعمال</span><span>الاستثمار العقاري</span><span>التسيير الفندقي</span></div></div>
         </div>
-        <div class="team-card">
-          <div class="role">نائب الرئيس، مسيّر</div>
-          <h3>Yassine Knouzi</h3>
-          <p>يشارك في إدارة الشركة إلى جانب الرئيس، بنفس صلاحيات التمثيل والتسيير الجاري.</p>
+        <div class="team-card team-card--profile">
+          <div class="tc-head">
+            <img class="tc-photo" src="../assets/img/team-yassine-knouzi.jpg" alt="صورة Yassine Knouzi، نائب رئيس Structura Capital Investments" width="104" height="104" loading="lazy">
+            <div><div class="role">نائب الرئيس، مسيّر</div><h3>Yassine Knouzi</h3></div>
+          </div>
+          <p class="tc-lead">مستشار مالي وتجاري وإداري متخصص في تحسين الاستثمارات وتثمينها، يرافق Yassine Knouzi المستثمرين والمسيّرين في تأمين رؤوس أموالهم، وهيكلة تركيبات مالية متينة، وتحقيق أقصى مردودية لمشاريعهم.</p>
+          <p>إن تمكّنه الدقيق من الأطر التنظيمية والإدارية، مقروناً برؤية تجارية واقعية، يتيح تقليص التعرض للمخاطر التشغيلية وتسريع تحقيق العائد على الاستثمار. ويشكّل تدخّله رافعة استراتيجية لتحويل الاستثمارات إلى أصول ناجعة ومستدامة.</p>
+          <div class="tc-block"><h4>مجالات التدخل</h4><div class="tc-tags"><span>تحسين الاستثمارات</span><span>التركيبات المالية</span><span>تأمين رأس المال</span><span>الأطر التنظيمية والإدارية</span><span>التطوير التجاري</span><span>التحكم في المخاطر</span></div></div>
         </div>
-        <div class="team-card">
-          <div class="role">النائبة الثانية للرئيس، مديرة التطوير</div>
-          <h3>Nada Briga</h3>
-          <p>تقود تطوير أنشطة المكتب ومنصاته، بتنسيق مع مهام الاستشارة الجارية.</p>
-        </div>
-        
       </div>
     </div>
   </section>
 
   <section class="section-tint">
-    <div class="container" style="display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;">
+    <div class="container cab-fonctionnement" style="display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;">
       <div>
         <span class="eyebrow">طريقة عملنا</span>
         <h2 style="color:var(--navy);font-size:clamp(1.5rem,2.4vw,1.9rem);">فريق واحد متماسك حول الطاولة</h2>
         <p style="margin-top:16px;font-size:1rem;color:var(--muted);line-height:1.7;">تُتخذ القرارات بشكل جماعي، في نفس الاجتماعات، مع نفس الملفات أمام الأعين. هذا التنسيق — بدلاً من تراكم متخصصين معزولين — هو ما يتيح لملفاتكم التقدم دون أن تضيع بين عدة محاورين.</p>
       </div>
       <div class="office-panel">
-        <div class="op-img"><img src="https://images.unsplash.com/photo-1572025442811-aa5146a780fb?auto=format&fit=crop&w=900&q=80" alt="قاعة اجتماعات Structura Capital Investments، بدون أشخاص" loading="lazy"></div>
+        <div class="op-img op-duo"><img src="../assets/img/structura-salle-reunion-1.jpg" alt="قاعة اجتماعات Structura Capital Investments — منظر عام لطاولة الاجتماعات" loading="lazy"><img src="../assets/img/structura-salle-reunion-2.jpg" alt="قاعة اجتماعات Structura Capital Investments — منظر نحو شاشة العرض" loading="lazy"></div>
         <div class="op-cap"><h4>قاعة اجتماعات Structura Capital Investments</h4><p>تأطير أسبوعي للملفات الجارية.</p></div>
       </div>
     </div>

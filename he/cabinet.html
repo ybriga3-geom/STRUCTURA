@@ -487,6 +487,35 @@ html{ overflow-x:clip; }
 @media (prefers-reduced-motion: reduce){ .hero-video video{ display:none; } .hero-video{ background:var(--navy-deep) url(../assets/video/structura-hero-poster.jpg) center/cover; } }
 .tag-link{ text-decoration:none; transition:filter .15s ease; }
 .tag-link:hover{ filter:brightness(.92); text-decoration:underline; }
+
+/* ---------- équipe dirigeante : fiches profil ---------- */
+.team-grid.team-grid--2{ grid-template-columns:repeat(2,1fr); align-items:start; }
+@media (max-width:900px){ .team-grid.team-grid--2{ grid-template-columns:1fr; } }
+.team-card--profile{ padding:28px; }
+.team-card--profile .tc-head{ display:flex; align-items:center; gap:20px; }
+.team-card--profile .tc-photo{ width:104px; height:104px; border-radius:50%; object-fit:cover; flex-shrink:0; border:3px solid #fff; box-shadow:0 0 0 1px var(--line), 0 6px 16px rgba(11,31,58,.12); }
+.team-card--profile .tc-head h3{ margin-top:6px; font-size:1.35rem; }
+.team-card--profile .tc-lead{ margin-top:20px; font-size:14.5px; color:var(--ink); line-height:1.7; }
+.team-card--profile .tc-block{ margin-top:22px; }
+.team-card--profile .tc-block h4{ font-size:11.5px; font-weight:700; letter-spacing:.06em; text-transform:uppercase; color:var(--brand); margin-bottom:8px; }
+.team-card--profile .tc-block > p{ margin-top:0; }
+.tc-timeline{ list-style:none; margin:0; padding:0; border-inline-start:2px solid var(--line); }
+.tc-timeline li{ position:relative; padding-inline-start:16px; padding-bottom:14px; }
+.tc-timeline li:last-child{ padding-bottom:0; }
+.tc-timeline li::before{ content:""; position:absolute; inset-inline-start:-6px; top:6px; width:10px; height:10px; border-radius:50%; background:#fff; border:2px solid var(--navy); }
+.tc-timeline li strong{ display:block; font-size:14px; color:var(--navy); }
+.tc-timeline .tc-date{ display:inline-block; margin-top:3px; font-size:11.5px; font-weight:600; color:var(--muted); background:var(--tint); border-radius:10px; padding:1px 8px; }
+.tc-timeline .tc-date.is-current{ color:#fff; background:var(--c-invest); }
+.tc-timeline li p{ margin-top:4px !important; font-size:13.5px; }
+.tc-tags{ display:flex; flex-wrap:wrap; gap:6px; }
+.tc-tags span{ font-size:12px; font-weight:600; color:var(--navy); background:var(--tint); border:1px solid var(--line); border-radius:14px; padding:4px 10px; }
+
+/* ---------- salle de réunion : double photo ---------- */
+.office-panel .op-img.op-duo{ aspect-ratio:auto; height:360px; display:grid; grid-template-columns:1.9fr 1fr; gap:4px; }
+.office-panel .op-img.op-duo img{ height:100%; }
+@media (max-width:900px){ .office-panel .op-img.op-duo{ height:260px; } }
+
+@media (max-width:900px){ .cab-fonctionnement{ grid-template-columns:1fr !important; gap:28px !important; } }
 </style>
 </head>
 <body>
@@ -575,36 +604,48 @@ html{ overflow-x:clip; }
   <section id="equipe">
     <div class="container">
       <span class="eyebrow">צוות ההנהלה</span>
-      <div class="team-grid">
-        <div class="team-card">
-          <div class="role">יושב ראש, מנכ"ל</div>
-          <h3>אדם פסיל</h3>
-          <p>מייצג את החברה ביחסיה עם צדדים שלישיים ורשויות, ומוביל את הכיוון הכללי של הפרויקטים.</p>
+      <div class="team-grid team-grid--2">
+        <div class="team-card team-card--profile">
+          <div class="tc-head">
+            <img class="tc-photo" src="../assets/img/team-adam-fassil.jpg" alt="דיוקן של אדם פסיל, יושב ראש Structura Capital Investments" width="104" height="104" loading="lazy">
+            <div><div class="role">יושב ראש, מנכ"ל</div><h3>אדם פסיל</h3></div>
+          </div>
+          <p class="tc-lead">מנהל בכיר בתחום הטכנולוגיה, יזם ומשקיע עם יותר מ-35 שנות ניסיון בין ארצות הברית למרוקו. לאחר קריירה בתעשיית הטכנולוגיה האמריקאית (קליפורניה, אריזונה), הרחיב את פעילותו להשקעות במלונאות ובנדל"ן במרוקו, שבה הוא מתגורר כיום, תוך שהוא ממשיך לפעול כיועץ בכיר.</p>
+          <div class="tc-block"><h4>השכלה</h4><p>אוניברסיטת ברקלי (מנהל עסקים וטכנולוגיה)</p></div>
+          <div class="tc-block"><h4>מסלול מקצועי</h4>
+            <ul class="tc-timeline">
+              <li><strong>יועץ בכיר — SoftPoint, סקוטסדייל (אריזונה)</strong><span class="tc-date is-current">תפקיד נוכחי</span><p>ייעוץ אסטרטגי לצוותי הנהלה: צמיחה, יעילות תפעולית והתאמת ההשקעות הטכנולוגיות ליעדים ארוכי הטווח של הארגון.</p></li>
+              <li><strong>יזם ומשקיע — מרוקו</strong><span class="tc-date">2000 – היום</span><p>רכישה, שיפוץ והפעלה של נכסי מלונאות ונדל"ן; פיקוח על המימון והניהול התפעולי; קשרים אסטרטגיים עם משקיעים ואנשי מקצוע בענף.</p></li>
+              <li><strong>שותף — Technology Ventures, סן פרנסיסקו וסקוטסדייל</strong><p>הקמה משותפת של חברות טכנולוגיה; פיתוח עסקי והתרחבות בשווקים תחרותיים בארצות הברית.</p></li>
+              <li><strong>תפקידים טכניים וייעוציים — IBM, HIS, MAI (קליפורניה)</strong><p>פרויקטים ארגוניים, הטמעת מערכות עבור לקוחות גדולים ושיפור היעילות התפעולית באמצעות טכנולוגיה.</p></li>
+              <li><strong>תחילת הדרך</strong><p>עבודה במלונאות במהלך הלימודים — ניסיון מכונן בשירות לקוחות ובניהול תפעולי.</p></li>
+            </ul>
+          </div>
+          <div class="tc-block"><h4>נקודות בולטות</h4><p>קריירה בינלאומית בין מרוקו לארצות הברית; מעבר מטכנולוגיה למלונאות ונדל"ן; פעילות ייעוץ אסטרטגי לצד פרויקטי השקעה ארוכי טווח.</p></div>
+          <div class="tc-block"><h4>כישורים</h4><div class="tc-tags"><span>מנהיגות בכירה</span><span>ייעוץ טכנולוגי</span><span>פיתוח עסקי</span><span>שותפויות אסטרטגיות</span><span>יזמות</span><span>השקעות נדל"ן</span><span>ניהול מלונאות</span></div></div>
         </div>
-        <div class="team-card">
-          <div class="role">סגן יושב ראש, מנכ"ל</div>
-          <h3>יאסין קנוזי</h3>
-          <p>מנהל את החברה יחד עם יושב הראש, בעל אותן סמכויות ייצוג וניהול שוטף.</p>
+        <div class="team-card team-card--profile">
+          <div class="tc-head">
+            <img class="tc-photo" src="../assets/img/team-yassine-knouzi.jpg" alt="דיוקן של יאסין קנוזי, סגן יושב ראש Structura Capital Investments" width="104" height="104" loading="lazy">
+            <div><div class="role">סגן יושב ראש, מנכ"ל</div><h3>יאסין קנוזי</h3></div>
+          </div>
+          <p class="tc-lead">יועץ פיננסי, מסחרי ומנהלי המתמחה באופטימיזציה ובהשבחת השקעות. יאסין קנוזי מלווה משקיעים ומנהלים בהבטחת ההון שלהם, בבניית מבנים פיננסיים יציבים ובמיקסום הרווחיות של הפרויקטים שלהם.</p>
+          <p>שליטתו המדוקדקת במסגרות הרגולטוריות והמנהליות, לצד ראייה מסחרית מעשית, מאפשרת לצמצם את החשיפה לסיכונים תפעוליים ולהאיץ את השגת התשואה על ההשקעה. מעורבותו מהווה מנוף אסטרטגי להפיכת השקעות לנכסים מניבים ובני קיימא.</p>
+          <div class="tc-block"><h4>תחומי פעילות</h4><div class="tc-tags"><span>אופטימיזציה של השקעות</span><span>מבנים פיננסיים</span><span>הבטחת הון</span><span>מסגרות רגולטוריות ומנהליות</span><span>פיתוח עסקי</span><span>ניהול סיכונים</span></div></div>
         </div>
-        <div class="team-card">
-          <div class="role">סגנית יושב ראש שנייה, מנהלת פיתוח</div>
-          <h3>נאדה בריגה</h3>
-          <p>מובילה את פיתוח פעילויות ופלטפורמות המשרד, בתיאום עם פרויקטי הייעוץ המתמשכים.</p>
-        </div>
-        
       </div>
     </div>
   </section>
 
   <section class="section-tint">
-    <div class="container" style="display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;">
+    <div class="container cab-fonctionnement" style="display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;">
       <div>
         <span class="eyebrow">איך אנחנו פועלים</span>
         <h2 style="color:var(--navy);font-size:clamp(1.5rem,2.4vw,1.9rem);">צוות אחד מלוכד סביב אותו שולחן</h2>
         <p style="margin-top:16px;font-size:1rem;color:var(--muted);line-height:1.7;">ההחלטות מתקבלות במשותף, באותן פגישות, מול אותם תיקים. תיאום זה — במקום ערימה של מומחים מבודדים — הוא שמאפשר לתיקים שלכם להתקדם מבלי להתפזר בין מספר אנשי קשר.</p>
       </div>
       <div class="office-panel">
-        <div class="op-img"><img src="https://images.unsplash.com/photo-1572025442811-aa5146a780fb?auto=format&fit=crop&w=900&q=80" alt="חדר ישיבות Structura Capital Investments, ללא אנשים" loading="lazy"></div>
+        <div class="op-img op-duo"><img src="../assets/img/structura-salle-reunion-1.jpg" alt="חדר הישיבות של Structura Capital Investments — מבט על שולחן הישיבות" loading="lazy"><img src="../assets/img/structura-salle-reunion-2.jpg" alt="חדר הישיבות של Structura Capital Investments — מבט לעבר מסך המצגות" loading="lazy"></div>
         <div class="op-cap"><h4>חדר הישיבות של Structura Capital Investments</h4><p>סקירה שבועית של התיקים הפעילים.</p></div>
       </div>
     </div>

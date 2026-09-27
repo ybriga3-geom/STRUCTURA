@@ -487,6 +487,35 @@ html{ overflow-x:clip; }
 @media (prefers-reduced-motion: reduce){ .hero-video video{ display:none; } .hero-video{ background:var(--navy-deep) url(../assets/video/structura-hero-poster.jpg) center/cover; } }
 .tag-link{ text-decoration:none; transition:filter .15s ease; }
 .tag-link:hover{ filter:brightness(.92); text-decoration:underline; }
+
+/* ---------- équipe dirigeante : fiches profil ---------- */
+.team-grid.team-grid--2{ grid-template-columns:repeat(2,1fr); align-items:start; }
+@media (max-width:900px){ .team-grid.team-grid--2{ grid-template-columns:1fr; } }
+.team-card--profile{ padding:28px; }
+.team-card--profile .tc-head{ display:flex; align-items:center; gap:20px; }
+.team-card--profile .tc-photo{ width:104px; height:104px; border-radius:50%; object-fit:cover; flex-shrink:0; border:3px solid #fff; box-shadow:0 0 0 1px var(--line), 0 6px 16px rgba(11,31,58,.12); }
+.team-card--profile .tc-head h3{ margin-top:6px; font-size:1.35rem; }
+.team-card--profile .tc-lead{ margin-top:20px; font-size:14.5px; color:var(--ink); line-height:1.7; }
+.team-card--profile .tc-block{ margin-top:22px; }
+.team-card--profile .tc-block h4{ font-size:11.5px; font-weight:700; letter-spacing:.06em; text-transform:uppercase; color:var(--brand); margin-bottom:8px; }
+.team-card--profile .tc-block > p{ margin-top:0; }
+.tc-timeline{ list-style:none; margin:0; padding:0; border-inline-start:2px solid var(--line); }
+.tc-timeline li{ position:relative; padding-inline-start:16px; padding-bottom:14px; }
+.tc-timeline li:last-child{ padding-bottom:0; }
+.tc-timeline li::before{ content:""; position:absolute; inset-inline-start:-6px; top:6px; width:10px; height:10px; border-radius:50%; background:#fff; border:2px solid var(--navy); }
+.tc-timeline li strong{ display:block; font-size:14px; color:var(--navy); }
+.tc-timeline .tc-date{ display:inline-block; margin-top:3px; font-size:11.5px; font-weight:600; color:var(--muted); background:var(--tint); border-radius:10px; padding:1px 8px; }
+.tc-timeline .tc-date.is-current{ color:#fff; background:var(--c-invest); }
+.tc-timeline li p{ margin-top:4px !important; font-size:13.5px; }
+.tc-tags{ display:flex; flex-wrap:wrap; gap:6px; }
+.tc-tags span{ font-size:12px; font-weight:600; color:var(--navy); background:var(--tint); border:1px solid var(--line); border-radius:14px; padding:4px 10px; }
+
+/* ---------- salle de réunion : double photo ---------- */
+.office-panel .op-img.op-duo{ aspect-ratio:auto; height:360px; display:grid; grid-template-columns:1.9fr 1fr; gap:4px; }
+.office-panel .op-img.op-duo img{ height:100%; }
+@media (max-width:900px){ .office-panel .op-img.op-duo{ height:260px; } }
+
+@media (max-width:900px){ .cab-fonctionnement{ grid-template-columns:1fr !important; gap:28px !important; } }
 </style>
 </head>
 <body>
@@ -575,36 +604,48 @@ html{ overflow-x:clip; }
   <section id="equipe">
     <div class="container">
       <span class="eyebrow">Leadership Team</span>
-      <div class="team-grid">
-        <div class="team-card">
-          <div class="role">Chairman, Managing Director</div>
-          <h3>Adam Fassil</h3>
-          <p>Represents the company in its dealings with third parties and administrations, and oversees the general direction of engagements.</p>
+      <div class="team-grid team-grid--2">
+        <div class="team-card team-card--profile">
+          <div class="tc-head">
+            <img class="tc-photo" src="../assets/img/team-adam-fassil.jpg" alt="Portrait of Adam Fassil, Chairman of Structura Capital Investments" width="104" height="104" loading="lazy">
+            <div><div class="role">Chairman, Managing Director</div><h3>Adam Fassil</h3></div>
+          </div>
+          <p class="tc-lead">Technology executive, entrepreneur and investor with more than 35 years of experience across the United States and Morocco. After a career in the American tech sector (California, Arizona), he expanded into hospitality and real-estate investment in Morocco, where he now lives, while continuing to work as an executive consultant.</p>
+          <div class="tc-block"><h4>Education</h4><p>University of California, Berkeley (Business &amp; Technology)</p></div>
+          <div class="tc-block"><h4>Career</h4>
+            <ul class="tc-timeline">
+              <li><strong>Executive Consultant — SoftPoint, Scottsdale (Arizona)</strong><span class="tc-date is-current">Current role</span><p>Strategic advice to leadership teams: growth, operational efficiency, and aligning technology investments with the organisation's long-term goals.</p></li>
+              <li><strong>Entrepreneur &amp; Investor — Morocco</strong><span class="tc-date">2000 – present</span><p>Acquisition, renovation and operation of hospitality and real-estate assets; oversight of financing and operations; strategic relationships with investors and industry professionals.</p></li>
+              <li><strong>Partner — Technology Ventures, San Francisco &amp; Scottsdale</strong><p>Co-founded technology companies; business development and expansion in competitive US markets.</p></li>
+              <li><strong>Technical &amp; advisory roles — IBM, HIS, MAI (California)</strong><p>Enterprise projects, systems implementation for major accounts, and technology-driven operational efficiency.</p></li>
+              <li><strong>Early career</strong><p>Worked in hospitality while studying — a formative experience in customer service and operations management.</p></li>
+            </ul>
+          </div>
+          <div class="tc-block"><h4>Highlights</h4><p>An international career between Morocco and the United States; a move from technology into hospitality and real estate; strategic advisory work carried out alongside long-term investment projects.</p></div>
+          <div class="tc-block"><h4>Skills</h4><div class="tc-tags"><span>Executive leadership</span><span>Technology consulting</span><span>Business development</span><span>Strategic partnerships</span><span>Entrepreneurship</span><span>Real-estate investment</span><span>Hospitality management</span></div></div>
         </div>
-        <div class="team-card">
-          <div class="role">Vice-Chairman, Managing Director</div>
-          <h3>Yassine Knouzi</h3>
-          <p>Co-directs the company alongside the Chairman, with the same powers of representation and day-to-day management.</p>
+        <div class="team-card team-card--profile">
+          <div class="tc-head">
+            <img class="tc-photo" src="../assets/img/team-yassine-knouzi.jpg" alt="Portrait of Yassine Knouzi, Vice-Chairman of Structura Capital Investments" width="104" height="104" loading="lazy">
+            <div><div class="role">Vice-Chairman, Managing Director</div><h3>Yassine Knouzi</h3></div>
+          </div>
+          <p class="tc-lead">A financial, commercial and administrative adviser specialising in optimising and enhancing the value of investments, Yassine Knouzi helps investors and executives secure their capital, build sound financial structures and maximise the returns of their projects.</p>
+          <p>His rigorous command of regulatory and administrative frameworks, combined with a pragmatic commercial outlook, reduces exposure to operational risk and brings forward the return on investment. His involvement is a strategic lever for turning investments into high-performing, lasting assets.</p>
+          <div class="tc-block"><h4>Areas of expertise</h4><div class="tc-tags"><span>Investment optimisation</span><span>Financial structuring</span><span>Capital protection</span><span>Regulatory &amp; administrative frameworks</span><span>Business development</span><span>Risk management</span></div></div>
         </div>
-        <div class="team-card">
-          <div class="role">Deputy Vice-Chair, Director of Development</div>
-          <h3>Nada Briga</h3>
-          <p>Drives the development of the firm's activities and platforms, in coordination with ongoing advisory engagements.</p>
-        </div>
-        
       </div>
     </div>
   </section>
 
   <section class="section-tint">
-    <div class="container" style="display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;">
+    <div class="container cab-fonctionnement" style="display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;">
       <div>
         <span class="eyebrow">How We Operate</span>
         <h2 style="color:var(--navy);font-size:clamp(1.5rem,2.4vw,1.9rem);">One team, united around the table</h2>
         <p style="margin-top:16px;font-size:1rem;color:var(--muted);line-height:1.7;">Decisions are made jointly, in the same meetings, looking at the same files. It is this coordination — rather than a stack of siloed specialists — that lets your files move forward without getting lost between multiple contacts.</p>
       </div>
       <div class="office-panel">
-        <div class="op-img"><img src="https://images.unsplash.com/photo-1572025442811-aa5146a780fb?auto=format&fit=crop&w=900&q=80" alt="Structura Capital Investments meeting room, no people" loading="lazy"></div>
+        <div class="op-img op-duo"><img src="../assets/img/structura-salle-reunion-1.jpg" alt="Structura Capital Investments meeting room — view of the meeting table" loading="lazy"><img src="../assets/img/structura-salle-reunion-2.jpg" alt="Structura Capital Investments meeting room — view towards the presentation screen" loading="lazy"></div>
         <div class="op-cap"><h4>Structura Capital Investments Meeting Room</h4><p>Weekly review of ongoing files.</p></div>
       </div>
     </div>

@@ -487,6 +487,35 @@ html{ overflow-x:clip; }
 @media (prefers-reduced-motion: reduce){ .hero-video video{ display:none; } .hero-video{ background:var(--navy-deep) url(../assets/video/structura-hero-poster.jpg) center/cover; } }
 .tag-link{ text-decoration:none; transition:filter .15s ease; }
 .tag-link:hover{ filter:brightness(.92); text-decoration:underline; }
+
+/* ---------- équipe dirigeante : fiches profil ---------- */
+.team-grid.team-grid--2{ grid-template-columns:repeat(2,1fr); align-items:start; }
+@media (max-width:900px){ .team-grid.team-grid--2{ grid-template-columns:1fr; } }
+.team-card--profile{ padding:28px; }
+.team-card--profile .tc-head{ display:flex; align-items:center; gap:20px; }
+.team-card--profile .tc-photo{ width:104px; height:104px; border-radius:50%; object-fit:cover; flex-shrink:0; border:3px solid #fff; box-shadow:0 0 0 1px var(--line), 0 6px 16px rgba(11,31,58,.12); }
+.team-card--profile .tc-head h3{ margin-top:6px; font-size:1.35rem; }
+.team-card--profile .tc-lead{ margin-top:20px; font-size:14.5px; color:var(--ink); line-height:1.7; }
+.team-card--profile .tc-block{ margin-top:22px; }
+.team-card--profile .tc-block h4{ font-size:11.5px; font-weight:700; letter-spacing:.06em; text-transform:uppercase; color:var(--brand); margin-bottom:8px; }
+.team-card--profile .tc-block > p{ margin-top:0; }
+.tc-timeline{ list-style:none; margin:0; padding:0; border-inline-start:2px solid var(--line); }
+.tc-timeline li{ position:relative; padding-inline-start:16px; padding-bottom:14px; }
+.tc-timeline li:last-child{ padding-bottom:0; }
+.tc-timeline li::before{ content:""; position:absolute; inset-inline-start:-6px; top:6px; width:10px; height:10px; border-radius:50%; background:#fff; border:2px solid var(--navy); }
+.tc-timeline li strong{ display:block; font-size:14px; color:var(--navy); }
+.tc-timeline .tc-date{ display:inline-block; margin-top:3px; font-size:11.5px; font-weight:600; color:var(--muted); background:var(--tint); border-radius:10px; padding:1px 8px; }
+.tc-timeline .tc-date.is-current{ color:#fff; background:var(--c-invest); }
+.tc-timeline li p{ margin-top:4px !important; font-size:13.5px; }
+.tc-tags{ display:flex; flex-wrap:wrap; gap:6px; }
+.tc-tags span{ font-size:12px; font-weight:600; color:var(--navy); background:var(--tint); border:1px solid var(--line); border-radius:14px; padding:4px 10px; }
+
+/* ---------- salle de réunion : double photo ---------- */
+.office-panel .op-img.op-duo{ aspect-ratio:auto; height:360px; display:grid; grid-template-columns:1.9fr 1fr; gap:4px; }
+.office-panel .op-img.op-duo img{ height:100%; }
+@media (max-width:900px){ .office-panel .op-img.op-duo{ height:260px; } }
+
+@media (max-width:900px){ .cab-fonctionnement{ grid-template-columns:1fr !important; gap:28px !important; } }
 </style>
 </head>
 <body>
@@ -575,36 +604,48 @@ html{ overflow-x:clip; }
   <section id="equipe">
     <div class="container">
       <span class="eyebrow">管理团队</span>
-      <div class="team-grid">
-        <div class="team-card">
-          <div class="role">董事长兼总经理</div>
-          <h3>Adam Fassil</h3>
-          <p>负责代表公司处理与第三方及行政机构的往来事务，并统筹各项服务的总体方向。</p>
+      <div class="team-grid team-grid--2">
+        <div class="team-card team-card--profile">
+          <div class="tc-head">
+            <img class="tc-photo" src="../assets/img/team-adam-fassil.jpg" alt="Structura Capital Investments 董事长 Adam Fassil 肖像" width="104" height="104" loading="lazy">
+            <div><div class="role">董事长兼总经理</div><h3>Adam Fassil</h3></div>
+          </div>
+          <p class="tc-lead">科技行业高管、企业家与投资人，拥有逾 35 年横跨美国与摩洛哥的从业经验。在美国科技行业（加利福尼亚州、亚利桑那州）任职多年后，他将业务拓展至摩洛哥的酒店与房地产投资领域，现定居摩洛哥，同时继续担任高管顾问。</p>
+          <div class="tc-block"><h4>教育背景</h4><p>加州大学伯克利分校（商业与技术）</p></div>
+          <div class="tc-block"><h4>职业经历</h4>
+            <ul class="tc-timeline">
+              <li><strong>高管顾问 — SoftPoint，斯科茨代尔（亚利桑那州）</strong><span class="tc-date is-current">现任</span><p>为管理团队提供战略咨询：业务增长、运营效率，以及使技术投资与组织长期目标保持一致。</p></li>
+              <li><strong>企业家与投资人 — 摩洛哥</strong><span class="tc-date">2000 年至今</span><p>收购、翻新并运营酒店及房地产资产；统筹融资与运营管理；与投资人及行业专业人士建立战略合作关系。</p></li>
+              <li><strong>合伙人 — Technology Ventures，旧金山与斯科茨代尔</strong><p>联合创办科技企业；在竞争激烈的美国市场开展业务拓展与扩张。</p></li>
+              <li><strong>技术与咨询职位 — IBM、HIS、MAI（加利福尼亚州）</strong><p>企业级项目、为大客户实施系统，并借助技术提升运营效率。</p></li>
+              <li><strong>职业起步</strong><p>求学期间在酒店业工作，奠定了客户服务与运营管理的基础经验。</p></li>
+            </ul>
+          </div>
+          <div class="tc-block"><h4>主要亮点</h4><p>横跨摩洛哥与美国的国际化职业生涯；由科技行业转型至酒店与房地产领域；在推进长期投资项目的同时持续开展战略咨询。</p></div>
+          <div class="tc-block"><h4>核心能力</h4><div class="tc-tags"><span>高管领导力</span><span>技术咨询</span><span>业务拓展</span><span>战略合作</span><span>创业</span><span>房地产投资</span><span>酒店管理</span></div></div>
         </div>
-        <div class="team-card">
-          <div class="role">副董事长兼总经理</div>
-          <h3>Yassine Knouzi</h3>
-          <p>与董事长共同管理公司事务，拥有同等的代表权与日常经营管理权。</p>
+        <div class="team-card team-card--profile">
+          <div class="tc-head">
+            <img class="tc-photo" src="../assets/img/team-yassine-knouzi.jpg" alt="Structura Capital Investments 副董事长 Yassine Knouzi 肖像" width="104" height="104" loading="lazy">
+            <div><div class="role">副董事长兼总经理</div><h3>Yassine Knouzi</h3></div>
+          </div>
+          <p class="tc-lead">Yassine Knouzi 是一位财务、商务与行政顾问，专注于投资的优化与增值，协助投资人和企业管理者保障资本安全、搭建稳健的融资结构，并实现项目收益最大化。</p>
+          <p>他对法规与行政框架的严谨把握，结合务实的商业视野，能够降低运营风险敞口，加快投资回报的实现。他的参与是将投资转化为高效、持久资产的战略杠杆。</p>
+          <div class="tc-block"><h4>专业领域</h4><div class="tc-tags"><span>投资优化</span><span>融资结构设计</span><span>资本安全</span><span>法规与行政框架</span><span>业务拓展</span><span>风险管控</span></div></div>
         </div>
-        <div class="team-card">
-          <div class="role">第二副董事长兼发展总监</div>
-          <h3>Nada Briga</h3>
-          <p>负责推动公司业务与数字平台的发展，并与正在进行的咨询项目保持协调联动。</p>
-        </div>
-        
       </div>
     </div>
   </section>
 
   <section class="section-tint">
-    <div class="container" style="display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;">
+    <div class="container cab-fonctionnement" style="display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;">
       <div>
         <span class="eyebrow">我们的运作方式</span>
         <h2 style="color:var(--navy);font-size:clamp(1.5rem,2.4vw,1.9rem);">同一支团队，齐聚同一张会议桌</h2>
         <p style="margin-top:16px;font-size:1rem;color:var(--muted);line-height:1.7;">所有决策均由三位负责人在同一场会议中、面对同一份项目文件共同商定作出。正是这种协同一致的工作方式——而非将不同专业领域割裂开来分别处理——使您的项目能够顺畅推进，不至于在多个对接方之间迷失方向。</p>
       </div>
       <div class="office-panel">
-        <div class="op-img"><img src="https://images.unsplash.com/photo-1572025442811-aa5146a780fb?auto=format&fit=crop&w=900&q=80" alt="Structura Capital Investments 会议室，无人物" loading="lazy"></div>
+        <div class="op-img op-duo"><img src="../assets/img/structura-salle-reunion-1.jpg" alt="Structura Capital Investments 会议室 — 会议桌全景" loading="lazy"><img src="../assets/img/structura-salle-reunion-2.jpg" alt="Structura Capital Investments 会议室 — 朝向演示屏幕的视角" loading="lazy"></div>
         <div class="op-cap"><h4>Structura Capital Investments 会议室</h4><p>每周例行项目回顾会议。</p></div>
       </div>
     </div>

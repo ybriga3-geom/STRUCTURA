@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" role="img" aria-label="General Management">
+<defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0B1F3A"/><stop offset="1" stop-color="#142B4D"/></linearGradient>
+<filter id="gl" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000" flood-opacity=".35"/></filter>
+<pattern id="dots" width="24" height="24" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1" fill="#FFFFFF" fill-opacity=".07"/></pattern></defs>
+<rect width="900" height="600" fill="url(#bg)"/><rect width="900" height="600" fill="url(#dots)"/>
+<line x1="450.0" y1="95.0" x2="695.0" y2="197.5" stroke="#FFFFFF" stroke-opacity=".28" stroke-width="2"/>
+<line x1="695.0" y1="197.5" x2="695.0" y2="402.5" stroke="#FFFFFF" stroke-opacity=".28" stroke-width="2"/>
+<line x1="695.0" y1="402.5" x2="450.0" y2="505.0" stroke="#FFFFFF" stroke-opacity=".28" stroke-width="2"/>
+<line x1="450.0" y1="505.0" x2="205.0" y2="402.5" stroke="#FFFFFF" stroke-opacity=".28" stroke-width="2"/>
+<line x1="205.0" y1="402.5" x2="205.0" y2="197.5" stroke="#FFFFFF" stroke-opacity=".28" stroke-width="2"/>
+<line x1="205.0" y1="197.5" x2="450.0" y2="95.0" stroke="#FFFFFF" stroke-opacity=".28" stroke-width="2"/>
+<line x1="450.0" y1="95.0" x2="450.0" y2="505.0" stroke="#FFFFFF" stroke-opacity=".10" stroke-width="1.5" stroke-dasharray="3 7"/>
+<line x1="695.0" y1="197.5" x2="205.0" y2="402.5" stroke="#FFFFFF" stroke-opacity=".10" stroke-width="1.5" stroke-dasharray="3 7"/>
+<line x1="695.0" y1="402.5" x2="205.0" y2="197.5" stroke="#FFFFFF" stroke-opacity=".10" stroke-width="1.5" stroke-dasharray="3 7"/>
+<line x1="450" y1="300" x2="450.0" y2="95.0" stroke="#1F4FD8" stroke-width="3" stroke-opacity=".85"/>
+<circle cx="450.0" cy="187.2" r="5" fill="#1F4FD8" stroke="#0B1F3A" stroke-width="2"/>
+<line x1="450" y1="300" x2="695.0" y2="197.5" stroke="#0E8F5D" stroke-width="3" stroke-opacity=".85"/>
+<circle cx="584.7" cy="243.6" r="5" fill="#0E8F5D" stroke="#0B1F3A" stroke-width="2"/>
+<line x1="450" y1="300" x2="695.0" y2="402.5" stroke="#C98400" stroke-width="3" stroke-opacity=".85"/>
+<circle cx="584.7" cy="356.4" r="5" fill="#C98400" stroke="#0B1F3A" stroke-width="2"/>
+<line x1="450" y1="300" x2="450.0" y2="505.0" stroke="#0E8F8F" stroke-width="3" stroke-opacity=".85"/>
+<circle cx="450.0" cy="412.8" r="5" fill="#0E8F8F" stroke="#0B1F3A" stroke-width="2"/>
+<line x1="450" y1="300" x2="205.0" y2="402.5" stroke="#7C3AED" stroke-width="3" stroke-opacity=".85"/>
+<circle cx="315.3" cy="356.4" r="5" fill="#7C3AED" stroke="#0B1F3A" stroke-width="2"/>
+<line x1="450" y1="300" x2="205.0" y2="197.5" stroke="#B5502E" stroke-width="3" stroke-opacity=".85"/>
+<circle cx="315.3" cy="243.6" r="5" fill="#B5502E" stroke="#0B1F3A" stroke-width="2"/>
+<circle cx="450" cy="300" r="104" fill="#B5502E" fill-opacity=".18"/>
+<circle cx="450" cy="300" r="86" fill="#FFFFFF" filter="url(#gl)"/>
+<circle cx="450" cy="300" r="78" fill="none" stroke="#B5502E" stroke-width="3"/>
+<text x="450" y="295" text-anchor="middle" font-family="Inter, 'Segoe UI', 'Noto Sans', 'Noto Sans Arabic', 'Noto Sans Hebrew', 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', Arial, sans-serif" font-size="21" font-weight="700" fill="#0B1F3A">General</text>
+<text x="450" y="321" text-anchor="middle" font-family="Inter, 'Segoe UI', 'Noto Sans', 'Noto Sans Arabic', 'Noto Sans Hebrew', 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', Arial, sans-serif" font-size="21" font-weight="700" fill="#0B1F3A">Management</text>
+<g filter="url(#gl)"><rect x="350.0" y="53.0" width="200" height="84" rx="14" fill="#FFFFFF"/></g>
+<rect x="350.0" y="53.0" width="7" height="84" rx="3" fill="#1F4FD8"/>
+<text x="450.0" y="102.0" text-anchor="middle" font-family="Inter, 'Segoe UI', 'Noto Sans', 'Noto Sans Arabic', 'Noto Sans Hebrew', 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', Arial, sans-serif" font-size="21" font-weight="700" fill="#0B1F3A">Strategy</text>
+<g filter="url(#gl)"><rect x="595.0" y="155.5" width="200" height="84" rx="14" fill="#FFFFFF"/></g>
+<rect x="595.0" y="155.5" width="7" height="84" rx="3" fill="#0E8F5D"/>
+<text x="695.0" y="192.5" text-anchor="middle" font-family="Inter, 'Segoe UI', 'Noto Sans', 'Noto Sans Arabic', 'Noto Sans Hebrew', 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', Arial, sans-serif" font-size="21" font-weight="700" fill="#0B1F3A">Investment</text>
+<text x="695.0" y="217.5" text-anchor="middle" font-family="Inter, 'Segoe UI', 'Noto Sans', 'Noto Sans Arabic', 'Noto Sans Hebrew', 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', Arial, sans-serif" font-size="18" font-weight="500" fill="#59657A">&amp; Financing</text>
+<g filter="url(#gl)"><rect x="595.0" y="360.5" width="200" height="84" rx="14" fill="#FFFFFF"/></g>
+<rect x="595.0" y="360.5" width="7" height="84" rx="3" fill="#C98400"/>
+<text x="695.0" y="397.5" text-anchor="middle" font-family="Inter, 'Segoe UI', 'Noto Sans', 'Noto Sans Arabic', 'Noto Sans Hebrew', 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', Arial, sans-serif" font-size="21" font-weight="700" fill="#0B1F3A">Legal</text>
+<text x="695.0" y="422.5" text-anchor="middle" font-family="Inter, 'Segoe UI', 'Noto Sans', 'Noto Sans Arabic', 'Noto Sans Hebrew', 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', Arial, sans-serif" font-size="18" font-weight="500" fill="#59657A">&amp; Tax</text>
+<g filter="url(#gl)"><rect x="350.0" y="463.0" width="200" height="84" rx="14" fill="#FFFFFF"/></g>
+<rect x="350.0" y="463.0" width="7" height="84" rx="3" fill="#0E8F8F"/>
+<text x="450.0" y="500.0" text-anchor="middle" font-family="Inter, 'Segoe UI', 'Noto Sans', 'Noto Sans Arabic', 'Noto Sans Hebrew', 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', Arial, sans-serif" font-size="21" font-weight="700" fill="#0B1F3A">Customs</text>
+<text x="450.0" y="525.0" text-anchor="middle" font-family="Inter, 'Segoe UI', 'Noto Sans', 'Noto Sans Arabic', 'Noto Sans Hebrew', 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', Arial, sans-serif" font-size="18" font-weight="500" fill="#59657A">&amp; International</text>
+<g filter="url(#gl)"><rect x="105.0" y="360.5" width="200" height="84" rx="14" fill="#FFFFFF"/></g>
+<rect x="105.0" y="360.5" width="7" height="84" rx="3" fill="#7C3AED"/>
+<text x="205.0" y="397.5" text-anchor="middle" font-family="Inter, 'Segoe UI', 'Noto Sans', 'Noto Sans Arabic', 'Noto Sans Hebrew', 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', Arial, sans-serif" font-size="21" font-weight="700" fill="#0B1F3A">Studies</text>
+<text x="205.0" y="422.5" text-anchor="middle" font-family="Inter, 'Segoe UI', 'Noto Sans', 'Noto Sans Arabic', 'Noto Sans Hebrew', 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', Arial, sans-serif" font-size="18" font-weight="500" fill="#59657A">&amp; Feasibility</text>
+<g filter="url(#gl)"><rect x="105.0" y="155.5" width="200" height="84" rx="14" fill="#FFFFFF"/></g>
+<rect x="105.0" y="155.5" width="7" height="84" rx="3" fill="#B5502E"/>
+<text x="205.0" y="192.5" text-anchor="middle" font-family="Inter, 'Segoe UI', 'Noto Sans', 'Noto Sans Arabic', 'Noto Sans Hebrew', 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', Arial, sans-serif" font-size="21" font-weight="700" fill="#0B1F3A">Steering</text>
+<text x="205.0" y="217.5" text-anchor="middle" font-family="Inter, 'Segoe UI', 'Noto Sans', 'Noto Sans Arabic', 'Noto Sans Hebrew', 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', Arial, sans-serif" font-size="18" font-weight="500" fill="#59657A">&amp; Monitoring</text>
+</svg>
